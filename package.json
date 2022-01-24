@@ -1,0 +1,26 @@
+{
+  "name": "tablesofcontents",
+  "version": "1.0.0",
+  "description": "## Project Description Tables of Contents will be an app designed for users to organize and log recipes to aid in the daily decisions of meal prep.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dekneeb/TablesofContents.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dekneeb/TablesofContents/issues"
+  },
+  "homepage": "https://github.com/dekneeb/TablesofContents#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.1.7"
+  }
+}
