@@ -28,6 +28,7 @@ router.get('/:id', (req, res) => {
     Recipes.findById(id, (err, foundRecipes) => {
         console.log(foundRecipes)
         res.render('show.ejs', { recipes: foundRecipes})
+        
     })
 })
 
