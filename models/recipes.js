@@ -12,15 +12,17 @@ const recipesSchema = new mongoose.Schema({
         type: String
     },
     ingredients: {
-        type: String
+        type: [String]
     },
     instructions: {
         type: String
     },
     category: {
         type: String
+    },
+    time:{
+        type: Number
     }
-
 })
 
 const Recipe = mongoose.model('Recipe', recipesSchema)

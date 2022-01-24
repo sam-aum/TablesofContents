@@ -7,7 +7,31 @@
     <title>Recipe Show Page</title>
 </head>
 <body>
-    <h1>Recipe Show</h1>
-    
+    <h1>Recipe: <%=recipes.title%></h1>
+    <p><img src =<%=recipes.img%>></p>
+    <h2>Description:</h2>
+    <p><%=recipes.description%></p>
+    <h2>Ingredients:</h2>
+    <div>
+        <% for(let i=0;i<recipes.ingredients.length;i++){%>
+         <li>
+             <a href="/<%=recipes.ingredients[i]._id%>">
+                 <%=recipes.ingredients[i]%>
+             </a>
+         </li>
+        <%}%>
+    </div>
+    <h2>Instructions:</h2>
+    <p><%=recipes.instructions%></p>
+    <h3>Category:</h3>
+    <p><%=recipes.category%></p>
+    <h3>Preparation time:</h3>
+    <p><%=recipes.time%></p>
+
+    <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
+        <input type="submit" value="delete this Recipe" >
+    </form>
+    <!-- Link to edit page -->
+    <a href="/recipes/<%=recipes._id%>/edit">Edit this recipe</a>
 </body>
 </html>
