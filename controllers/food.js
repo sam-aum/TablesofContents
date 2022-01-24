@@ -35,8 +35,9 @@ router.post('/', (req, res) => {
     console.log('hitting post route')
     console.log(req.body)
     
-    Recipes.create(req.body, (err, createdItalianRecipe) => {
-        
+    Recipes.create(req.body, (err, createdRecipe) => {
+        console.log(req.body)
+        console.log(createdRecipe)
         res.redirect('/')
     })
 })
@@ -53,6 +54,15 @@ router.get('/:id/edit', (req, res) => {
             // { id: req.params.id })
         // }
 //     })
+})
+
+
+// Delete Route
+router.delete('/recipes/:id', (req, res)=>{
+    Recipes.findByIdAndDelete({_id : req.params.id}, (err, deleteMsg)=>{
+        console.log(deleteMsg)
+        res.redirect('/')
+    })
 })
 
 module.exports = router
