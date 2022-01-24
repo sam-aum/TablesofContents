@@ -9,6 +9,7 @@
 <body>
     <h1>Recipes Index (Home)</h1>
     <div>
+        <ul>
         <% for(let i=0;i<recipes.length;i++){%>
             <li>
                 <a href="/<%=recipes[i]._id%>">
@@ -22,6 +23,7 @@
                 </form>
             </li>
         <%}%>
+        </ul>
     </div>
     <a href='/new'>Add a new recipe!</a>
 </body>
