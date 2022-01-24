@@ -25,8 +25,20 @@ As a user I want to be able to delete recipes
 3. Detailed categorizing (i.e breakfast, lunch, dinner)
 4. Full course meal creation
 
-##RESTful Routing Chart
+## RESTful Routing Chart
+
 ![Screen Shot 2022-01-21 at 3 49 31 PM](https://user-images.githubusercontent.com/95259747/150806331-13de8cca-d8d6-4ad1-b721-7c0aa41eff23.png)
+
+
+## ERD
+
+<img width="658" alt="Screen Shot 2022-01-21 at 11 02 23 AM" src="https://user-images.githubusercontent.com/95259747/150806708-35bb4d54-9490-42af-b76b-062748f7344e.png">
+
+
+
+## Wireframes
+
+
 
 
 
