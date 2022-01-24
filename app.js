@@ -18,7 +18,6 @@ app.set('view engine', 'ejs')
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 
-
 app.use("/", foodController)
 
 // home page
