@@ -37,7 +37,13 @@
     <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
         <input type="submit" value="delete this Recipe" >
     </form>
-    <!-- Link to edit page -->
-    <a href="/recipes/<%=recipes._id%>/edit">Edit this recipe</a>
+   
+    
+    <div>
+        <a href="/<%=recipes._id%>/edit">Edit this recipe</a>
+    </div>
+    <div>
+        <a href="/">Recipes Page</a>
+    </div>
 </body>
 </html>

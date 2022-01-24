@@ -10,8 +10,7 @@ const Recipes = require('../models/Recipes')
 
 // index route
 router.get('/', (req, res) => {
-    console.log('index page')
-    Recipes.find({}, (err, foundRecipes) => {
+        Recipes.find({}, (err, foundRecipes) => {
         
         res.render('index.ejs', {
             recipes: foundRecipes
@@ -48,15 +47,15 @@ router.post('/', (req, res) => {
 // edit route
 router.get('/:id/edit', (req, res) => {
  
-    // Recipes.findById(req.params.id, (err, foundRecipe) => {
-    //     if (err) {
-    //         return res.send(err)
-    //     } else {
-    //         console.log(foundRecipe)
-            res.render('edit.ejs', )
-            // { id: req.params.id })
-        // }
-//     })
+    Recipes.findById(req.params.id, (err, foundRecipe) => {
+        if (err) {
+            return res.send(err)
+        } else {
+            console.log(foundRecipe)
+            res.render('edit.ejs', 
+            {recipe: foundRecipe, id: req.params.id })
+        }
+    })
 })
 
 
@@ -66,6 +65,19 @@ router.delete('/recipes/:id', (req, res)=>{
         console.log(deleteMsg)
         res.redirect('/')
     })
+})
+
+
+// update route
+router.put('/:id', (req, res) => {
+    Recipes.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedRecipe)=>{
+        if(err){
+          return  res.send(err)
+        }
+        console.log(updatedRecipe)
+        res.redirect('/'+req.params.id)
+    })
+    // res.send(req.body)
 })
 
 module.exports = router

@@ -21,7 +21,7 @@ const recipesSchema = new mongoose.Schema({
         type: String
     },
     time: {
-        type: Number
+        type: String
     }
 })
 
