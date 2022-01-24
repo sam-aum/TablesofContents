@@ -13,12 +13,18 @@
     <p><%=recipes.description%></p>
     <h2>Ingredients:</h2>
     <div>
+
+        
         <% for(let i=0;i<recipes.ingredients.length;i++){%>
-         <li>
-             <a href="/<%=recipes.ingredients[i]._id%>">
-                 <%=recipes.ingredients[i]%>
-             </a>
-         </li>
+         <ul>
+                 <%var list = recipes.ingredients[i].split(',')%>
+                <% console.log(list) %>
+                 <% for(let i=0; i <list.length; i++){ %>
+                    <li><%= list[i] %> </li>
+               <% } %>
+                 
+            </ul>
+        
         <%}%>
     </div>
     <h2>Instructions:</h2>
