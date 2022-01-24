@@ -16,6 +16,9 @@ const recipesSchema = new mongoose.Schema({
     },
     instructions: {
         type: String
+    },
+    category: {
+        type: String
     }
 
 })
@@ -23,3 +26,5 @@ const recipesSchema = new mongoose.Schema({
 const Recipe = mongoose.model('Recipe', recipesSchema)
 
 module.exports = Recipe
+
+//enum

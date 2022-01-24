@@ -2,7 +2,7 @@
   "name": "tablesofcontents",
   "version": "1.0.0",
   "description": "## Project Description Tables of Contents will be an app designed for users to organize and log recipes to aid in the daily decisions of meal prep.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
