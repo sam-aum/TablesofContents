@@ -6,12 +6,10 @@ Tables of Contents will be an app designed for users to organize and log recipes
 
 
 ## USER STORIES
-As a user you can browse different categories for dinner or dessert recipes
-User can add in additional recipes to a category for other user to try
-Recipes can be updated in real time
-User can click on recipes and see a shopping list as well as instructions
-Stretch goal: user can select different recipes for the week and compile a shopping list to meal prep
-Stretch goal #2: users can comment on recipes to leave reviews or tips?
+As a user I want to be able organize recipes based on category - app/snacks, vs desserts, vs dinner
+As a user I want to be able to add in additional recipes to a category for other users to try
+As a user I want to be able to edit recipes
+As a user I want to be able to delete recipes
 
 
 ## MVP GOALS
