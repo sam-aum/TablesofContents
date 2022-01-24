@@ -1,4 +1,5 @@
 const express = require('express')
+const Recipe = require('../models/Recipes')
 const { update } = require('../models/Recipes')
 // router stores an instance of the express router class
 
@@ -26,7 +27,8 @@ router.get('/:id', (req, res) => {
     const id = req.params.id
     console.log(id)
     Recipes.findById(id, (err, foundRecipes) => {
-        res.render('show.ejs', { recipes: foundRecipes })
+        console.log(foundRecipes)
+        res.render('show.ejs', { recipes: foundRecipes})
     })
 })
 

@@ -20,7 +20,6 @@ app.use(express.urlencoded({extended: false}))
 
 app.use("/", foodController)
 
-
 // home page
 app.get('/', (req,res)=>{
     console.log('hitting home route')
