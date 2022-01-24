@@ -23,7 +23,6 @@ const recipesSchema = new mongoose.Schema({
     time: {
         type: Number
     }
-
 })
 
 const Recipe = mongoose.model('Recipe', recipesSchema)
