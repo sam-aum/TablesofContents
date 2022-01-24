@@ -15,9 +15,9 @@
                 <a href="/<%=recipes[i]._id%>">
                     <%= recipes[i].title%>
                 </a>
-
-                <img src=''>
-
+                <div>
+                    <img src=<%= recipes[i].img %>>
+                </div>
                 <form action='/recipes/<%=recipes[i]._id%>?_method=DELETE' method='POST'>
                     <input type="submit" value="Delete <%=recipes[i].title%>">
                 </form>
