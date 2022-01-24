@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express ()
 const PORT = 8000
+const methodOverride = require('method-override')
 
 // controller import (along with the rest of my express imports)
 const foodController = require('./controllers/food')
@@ -12,7 +13,10 @@ mongoose.connect(URI, ()=>{
     console.log('mongoose connected at ' + URI)
 })
 
+
 app.set('view engine', 'ejs')
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended: false}))
 
 app.use(express.urlencoded({extended: false}))
 
