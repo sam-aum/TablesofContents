@@ -10,8 +10,7 @@ const Recipes = require('../models/Recipes')
 
 // index route
 router.get('/', (req, res) => {
-    console.log('index page')
-    Recipes.find({}, (err, foundRecipes) => {
+        Recipes.find({}, (err, foundRecipes) => {
         
         res.render('index.ejs', {
             recipes: foundRecipes
