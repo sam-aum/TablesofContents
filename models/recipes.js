@@ -20,7 +20,7 @@ const recipesSchema = new mongoose.Schema({
     category: {
         type: String
     },
-    time:{
+    time: {
         type: Number
     }
 })

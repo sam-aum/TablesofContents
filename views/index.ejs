@@ -9,14 +9,22 @@
 <body>
     <h1>Recipes Index (Home)</h1>
     <div>
+        <ul>
         <% for(let i=0;i<recipes.length;i++){%>
             <li>
                 <a href="/<%=recipes[i]._id%>">
                     <%= recipes[i].title%>
                 </a>
+
+                <img src=''>
+
+                <form action='/recipes/<%=recipes[i]._id%>?_method=DELETE' method='POST'>
+                    <input type="submit" value="Delete <%=recipes[i].title%>">
+                </form>
             </li>
         <%}%>
+        </ul>
     </div>
-    <a href='/new'>Create Page</a>
+    <a href='/new'>Add a new recipe!</a>
 </body>
 </html>
