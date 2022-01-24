@@ -21,9 +21,8 @@ const recipesSchema = new mongoose.Schema({
         type: String
     },
     time: {
-        type: Number
+        type: String
     }
-
 })
 
 const Recipe = mongoose.model('Recipe', recipesSchema)
