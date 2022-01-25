@@ -15,19 +15,20 @@ router.get('/', (req, res) => {
 })
 
 // New route
-router.get('/new', (req, res) => res.render('new.ejs'))
+router.get('/new', (req, res) => res.render('category/new.ejs'))
 
 // Show route
 router.get('/:id', (req, res) => {
     const id = req.params.id
     Category.findById(id, (err, foundCategory) => {
-        res.render('show.ejs', {category: foundCategory})        
+        res.render('category/show.ejs', {category: foundCategory})        
     })
 })
 
 // Create route
 router.post('/', (req, res) => {
     Category.create(req.body, (err, createdCategory) => {
+        console.log(createdCategory)
         res.redirect('/category')
     })
 })
@@ -38,7 +39,7 @@ router.get('/:id/edit', (req, res) => {
         if (err) {
             return res.send(err)
         } else {
-            res.render('edit.ejs', 
+            res.render('category/edit.ejs', 
             {category: foundCategory, id: req.params.id })
         }
     })

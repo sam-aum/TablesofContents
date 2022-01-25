@@ -23,9 +23,9 @@ app.use("/recipes", recipesController)
 app.use("/category", categoryController)
 
 // home page
-app.get('/home', (req,res)=>{
+app.get('/', (req,res)=>{
     console.log('hitting home route')
-    res.send('home.ejs')
+    res.render('home.ejs')
 })
 
 
