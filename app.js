@@ -5,6 +5,7 @@ const methodOverride = require('method-override')
 
 // controller import (along with the rest of my express imports)
 const recipesController = require('./controllers/recipes')
+const categoryController = require('./controllers/category')
 
 const mongoose = require('mongoose')
 const URI = 'mongodb://127.0.0.1:27017/recipes'
@@ -19,6 +20,7 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 
 app.use("/recipes", recipesController)
+app.use("/category", categoryController)
 
 // home page
 app.get('/', (req,res)=>{
