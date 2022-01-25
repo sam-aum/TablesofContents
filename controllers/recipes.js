@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 })
 
 // new route
-router.get('/new', (req, res) => res.render('new.ejs'))
+router.get('/new', (req, res) => res.render('recipes/new.ejs'))
 
 // show route
 router.get('/:id', (req, res) => {
