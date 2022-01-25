@@ -28,8 +28,16 @@
         <p>Category: </p>
         <input name="category" placeholder="add a category">
 
-        <p>Time: </p>
-        <input name="time" value='<%=recipe.time%>' placeholder="Edit the time">
+        <p>Food Type:</p>
+     
+        <select id='foodType' name ='foodType' onchange = "" >  
+            <option> ---Select Option--- </option>  
+            <option> Entree </option>  
+            <option> Appetizer </option>  
+            <option> Dessert </option>  
+          
+            </select>  
+
 
       <br><br>
         <input type="submit" value="Edit recipe">

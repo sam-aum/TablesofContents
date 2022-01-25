@@ -18,12 +18,12 @@ app.set('view engine', 'ejs')
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 
-app.use("/", foodController)
+app.use("/recipes/", foodController)
 
 // home page
-app.get('/', (req,res)=>{
+app.get('/home', (req,res)=>{
     console.log('hitting home route')
-    res.send('home route')
+    res.send('home.ejs')
 })
 
 

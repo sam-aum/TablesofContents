@@ -1,19 +1,19 @@
 const express = require('express')
-const Recipe = require('../models/Recipes')
+const Category = require('../models/Category')
 
 // router stores an instance of the express router class
 
 const router = express.Router()
 // router intercepts the request object and checks all routes beneath it
-const Recipes = require('../models/Recipes')
+
 
 
 // index route
 router.get('/', (req, res) => {
-        Recipes.find({}, (err, foundRecipes) => {
+        Category.find({}, (err, foundCategory) => {
         
         res.render('index.ejs', {
-            recipes: foundRecipes
+            category: foundCategory
         })
     })
 })
@@ -75,7 +75,7 @@ router.put('/:id', (req, res) => {
           return  res.send(err)
         }
         console.log(updatedRecipe)
-        res.redirect('/recipes/'+req.params.id)
+        res.redirect('/'+req.params.id)
     })
     // res.send(req.body)
 })
