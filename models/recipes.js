@@ -22,6 +22,10 @@ const recipesSchema = new mongoose.Schema({
     },
     time: {
         type: String
+    },
+    foodType: {
+        type: String,
+        default: 'ENTREE'
     }
 })
 
