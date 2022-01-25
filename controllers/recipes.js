@@ -1,20 +1,16 @@
 const express = require('express')
-const { update } = require('../models/Recipes')
+const Recipes = require('../models/Recipes')
 // router stores an instance of the express router class
 
 const router = express.Router()
 // router intercepts the request object and checks all routes beneath it
-const Recipes = require('../models/Recipes')
+
 
 
 // index route
 router.get('/', (req, res) => {
-    console.log('index page')
-    Recipes.find({}, (err, foundRecipes) => {
-        
-        res.render('index.ejs', {
-            recipes: foundRecipes
-        })
+        Recipes.find({}, (err, foundRecipes) => {       
+        res.render('index.ejs', {recipes: foundRecipes})
     })
 })
 
@@ -26,7 +22,8 @@ router.get('/:id', (req, res) => {
     const id = req.params.id
     console.log(id)
     Recipes.findById(id, (err, foundRecipes) => {
-        res.render('show.ejs', { recipes: foundRecipes })
+        console.log(foundRecipes)
+        res.render('show.ejs', {recipes: foundRecipes})        
     })
 })
 
@@ -36,10 +33,9 @@ router.post('/', (req, res) => {
     console.log(req.body)
     
     Recipes.create(req.body, (err, createdRecipe) => {
-       console.log(req.body)
-       console.log(createdRecipe)
-       
-        res.redirect('/')
+        console.log(req.body)
+        console.log(createdRecipe)
+        res.redirect('/recipes')
     })
 })
 
@@ -59,11 +55,24 @@ router.get('/:id/edit', (req, res) => {
 
 
 // Delete Route
-router.delete('/recipes/:id', (req, res)=>{
+router.delete('/:id', (req, res)=>{
     Recipes.findByIdAndDelete({_id : req.params.id}, (err, deleteMsg)=>{
-        //console.log(deleteMsg)
-        res.redirect('/')
+        console.log(deleteMsg)
+        res.redirect('/recipes')
     })
+})
+
+
+// update route
+router.put('/:id', (req, res) => {
+    Recipes.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedRecipe)=>{
+        if(err){
+          return  res.send(err)
+        }
+        console.log(updatedRecipe)
+        res.redirect('/recipes/'+req.params.id)
+    })
+    // res.send(req.body)
 })
 
 module.exports = router
