@@ -47,10 +47,7 @@
     <p><%=recipes.category%></p>
 
     <h3>Food Type:</h3>
-    <p></p>
-    <h3>Preparation time:</h3>
-    <p><%=recipes.time%></p>
-
+    <p><%= recipes.foodType %></p>
     <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
         <input type="submit" value="Delete this Recipe" >
     </form>  <br>    
