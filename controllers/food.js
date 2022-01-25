@@ -38,6 +38,7 @@ router.post('/', (req, res) => {
     Recipes.create(req.body, (err, createdRecipe) => {
        console.log(req.body)
        console.log(createdRecipe)
+       
         res.redirect('/')
     })
 })
