@@ -10,12 +10,12 @@ const router = express.Router()
 // index route
 router.get('/', (req, res) => {
         Recipes.find({}, (err, foundRecipes) => {       
-        res.render('index.ejs', {recipes: foundRecipes})
+        res.render('recipes/index.ejs', {recipes: foundRecipes})
     })
 })
 
 // new route
-router.get('/new', (req, res) => res.render('new.ejs'))
+router.get('/new', (req, res) => res.render('recipes/new.ejs'))
 
 // show route
 router.get('/:id', (req, res) => {
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
     console.log(id)
     Recipes.findById(id, (err, foundRecipes) => {
         console.log(foundRecipes)
-        res.render('show.ejs', {recipes: foundRecipes})        
+        res.render('recipes/show.ejs', {recipes: foundRecipes})        
     })
 })
 
@@ -42,15 +42,15 @@ router.post('/', (req, res) => {
 // edit route
 router.get('/:id/edit', (req, res) => {
  
-    // Recipes.findById(req.params.id, (err, foundRecipe) => {
-    //     if (err) {
-    //         return res.send(err)
-    //     } else {
-    //         console.log(foundRecipe)
-            res.render('edit.ejs', )
-            // { id: req.params.id })
-        // }
-//     })
+    Recipes.findById(req.params.id, (err, foundRecipe) => {
+        if (err) {
+            return res.send(err)
+        } else {
+            console.log(foundRecipe)
+            res.render('recipes/edit.ejs', 
+            {recipe: foundRecipe, id: req.params.id })
+        }
+    })
 })
 
 
