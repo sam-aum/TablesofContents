@@ -12,7 +12,8 @@ const recipesSchema = new mongoose.Schema({
         type: String
     },
     ingredients: {
-        type: [String]
+        type: [String],
+        lowercase: true
     },
     instructions: {
         type: String

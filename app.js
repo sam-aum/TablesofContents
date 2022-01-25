@@ -25,7 +25,7 @@ app.use("/category", categoryController)
 // home page
 app.get('/', (req,res)=>{
     console.log('hitting home route')
-    res.send('home route')
+    res.render('home.ejs')
 })
 
 
