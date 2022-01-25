@@ -12,7 +12,7 @@
         <ul>
         <% for(let i=0;i<recipes.length;i++){%>
             <li>
-                <a href="/<%=recipes[i]._id%>">
+                <a href="/recipes/<%=recipes[i]._id%>">
                     <%= recipes[i].title%>
                 </a>
                 <div>
@@ -26,6 +26,6 @@
         <%}%>
         </ul>
     </div>
-    <a href='/new'>Add a new recipe!</a>
+    <a href='/recipes/new'>Add a new recipe!</a>
 </body>
 </html>
