@@ -26,26 +26,23 @@
                 <% console.log(list) %>
                 <% for(let i=0; i <list.length; i++){ %>
                     <li><%= list[i] %> </li>
-                <% } %>
-                 
+                <% } %>   
             </ul>
         <%}%>
     </div>
 
     <h2>Instructions:</h2>
-    <p>
+    
     <div>
         <ul>
-        <% var rule = recipes.instructions.split(';') %>
-        <% console.log(rule) %>
-        <% for(let i=0; i <rule.length; i++){ %>
-           
-             <li><%= rule[i] %> </li>
-       <% } %>
-            </ul>
-     
+            <% var rule = recipes.instructions.split(';') %>
+            <% console.log(rule) %>
+            <% for(let i=0; i <rule.length; i++){ %>
+                <li><%= rule[i] %> </li>
+            <% } %>
+        </ul>     
     </div>
-</p>
+
     <h3>Category:</h3>
     <p><%=recipes.category%></p>
 

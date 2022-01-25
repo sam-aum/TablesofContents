@@ -4,7 +4,7 @@ const PORT = 8000
 const methodOverride = require('method-override')
 
 // controller import (along with the rest of my express imports)
-const foodController = require('./controllers/food')
+const recipesController = require('./controllers/recipes')
 
 const mongoose = require('mongoose')
 const URI = 'mongodb://127.0.0.1:27017/recipes'
@@ -18,7 +18,7 @@ app.set('view engine', 'ejs')
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 
-app.use("/", foodController)
+app.use("/recipes", recipesController)
 
 // home page
 app.get('/', (req,res)=>{

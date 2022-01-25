@@ -25,7 +25,6 @@ const recipesSchema = new mongoose.Schema({
     },
     foodType: {
         type: String,
-        enum: ['ENTREE', "APPETIZER", "DESSERT"],
         default: 'ENTREE'
     }
 })
