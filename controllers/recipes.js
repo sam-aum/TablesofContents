@@ -74,7 +74,8 @@ router.get('/:id/edit', (req, res) => {
         (err, foundRecipe) => {
         if (err) {
             return res.send(err)
-        } else {
+        } 
+        else {
             Category.find({}, (err, foundCategory)=>{
                 console.log(foundRecipe)
                 res.render('recipes/edit.ejs', 
@@ -84,6 +85,7 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
+
 // Delete Route
 router.delete('/:id', (req, res)=>{
     Recipes.findByIdAndDelete({_id : req.params.id}, (err, deleteMsg)=>{
@@ -91,7 +93,6 @@ router.delete('/:id', (req, res)=>{
         res.redirect('/recipes')
     })
 })
-
 
 // update route
 router.put('/:id', (req, res) => {

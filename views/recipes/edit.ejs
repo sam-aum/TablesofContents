@@ -14,19 +14,19 @@
         <input name="title" id='title' type='text' value='<%=recipe.title%>' placeholder="Edit <%=recipe.title%>">
 
         <p>Image: </p>
-        <input name="img" placeholder="add image here">
+        <input name="img" value='<%=recipe.img%>' placeholder="add image here">
 
         <p>Category: </p>
         <select id='category' name='category'>
-            <option> <%=recipe.category.title%> </option>  
+                <option value="" disabled selected hidden> <%=recipe.category.title%> </option>  
             <%for(let i=0;i<category.length; i++){%>
-                <option value="<%=category[i]._id%>"><%= category[i].title%></option>
+                <option value="<%=category[i]._id%>"> <%= category[i].title%> </option>
             <% }%>
         </select>
 
         <p>Food Type:</p>
         <select id='foodType' name ='foodType' onchange = "" >  
-            <option> <%=recipe.foodType%> </option>
+            <option value="" disabled selected hidden> <%=recipe.foodType%> </option>
             <option> Entree </option>  
             <option> Appetizer </option>  
             <option> Dessert </option>  
