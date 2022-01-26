@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// create route
+// create routee
 router.post('/', (req, res) => {
     console.log('hitting post route')
     console.log(req.body)
