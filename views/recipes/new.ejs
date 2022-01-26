@@ -19,17 +19,13 @@
         <p>Image: </p>
         <input name="img" placeholder="add image here">
 
-        <p>Description: </p>
-        <textarea name="description" cols="30" rows="10" placeholder='write a description'></textarea>
-
-        <p>Ingredients: </p>
-        <textarea name="ingredients" cols="30" rows="10" placeholder='add ingredients'></textarea>
-
-        <p>Instructions: </p>
-        <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
-
         <p>Category: </p>
-        <input name="category" placeholder="add a category">
+        <select id='category' name='category'>
+                <option> ---Select Option--- </option>  
+            <%for(let i=0;i<category.length; i++){%>
+                <option value="<%=category[i]._id%>"><%= category[i].title%></option>
+            <% }%>
+        </select>
 
         <p>Food Type:</p>
         <select id='foodType' name ='foodType' onchange = "" >  
@@ -42,7 +38,16 @@
         <p>Time: </p>
         <input name="time" type='text' placeholder="add time">
 
-      <br><br>
+        <p>Description: </p>
+        <textarea name="description" cols="30" rows="10" placeholder='write a description'></textarea>
+
+        <p>Ingredients: </p>
+        <textarea name="ingredients" cols="30" rows="10" placeholder='add ingredients'></textarea>
+
+        <p>Instructions: </p>
+        <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
+
+        <br><br>
         <input type="submit" value="Create new recipe">
     </form>
     

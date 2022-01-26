@@ -8,10 +8,11 @@ const recipesController = require('./controllers/recipes')
 const categoryController = require('./controllers/category')
 
 const mongoose = require('mongoose')
-const URI = 'mongodb://127.0.0.1:27017/recipes'
+const connectionString = "mongodb://127.0.0.1:27017/twoModelDB"
 
-mongoose.connect(URI, ()=>{
-    console.log('mongoose connected at ' + URI)
+mongoose.connect(connectionString)
+mongoose.connection.on('connected',()=>{
+    console.log('connected to mongoDB: '+connectionString.split('/').pop())
 })
 
 
@@ -25,7 +26,7 @@ app.use("/category", categoryController)
 // home page
 app.get('/', (req,res)=>{
     console.log('hitting home route')
-    res.send('home route')
+    res.render('home.ejs')
 })
 
 

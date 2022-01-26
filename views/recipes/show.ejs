@@ -12,6 +12,8 @@
     <p><img src =<%=recipes.img%>></p>
 
     <h4>Category: <%=recipes.category%></h4>
+
+    <h4>Food Type: <%= recipes.foodType %></h4>
     
     <h4>Preparation time: <%=recipes.time%></h4>
 
@@ -42,14 +44,6 @@
             <% } %>
         </ul>     
     </div>
-
-    <h3>Category:</h3>
-    <p><%=recipes.category%></p>
-
-    <h3>Food Type:</h3>
-    <p></p>
-    <h3>Preparation time:</h3>
-    <p><%=recipes.time%></p>
 
     <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
         <input type="submit" value="Delete this Recipe" >
