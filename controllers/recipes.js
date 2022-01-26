@@ -1,5 +1,6 @@
 const express = require('express')
 const Recipes = require('../models/Recipes')
+const Category = require('../models/Category')
 // router stores an instance of the express router class
 
 const router = express.Router()
@@ -15,7 +16,15 @@ router.get('/', (req, res) => {
 })
 
 // new route
-router.get('/new', (req, res) => res.render('recipes/new.ejs'))
+router.get('/new', (req, res) => {
+    Category.find({}, (err, foundCategory)=>{
+        if(err){
+            res.send(err)
+        }else {
+            res.render('recipes/new.ejs', {category: foundCategory})            
+        }
+    })
+})
 
 // show route
 router.get('/:id', (req, res) => {
@@ -27,7 +36,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-// create route
+// create routee
 router.post('/', (req, res) => {
     console.log('hitting post route')
     console.log(req.body)
