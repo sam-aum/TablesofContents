@@ -12,6 +12,7 @@
     <p><img src =<%=recipes.img%>></p>
 
     <h4>Category: <%=recipes.category%></h4>
+  
 
     <h4>Food Type: <%= recipes.foodType %></h4>
     
@@ -36,13 +37,13 @@
     <h2>Instructions:</h2>
     
     <div>
-        <ul>
+        <ol>
             <% var rule = recipes.instructions.split(';') %>
             <% console.log(rule) %>
             <% for(let i=0; i <rule.length; i++){ %>
                 <li><%= rule[i] %> </li>
             <% } %>
-        </ul>     
+        </ol>     
     </div>
 
     <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">

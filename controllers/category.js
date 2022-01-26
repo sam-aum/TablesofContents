@@ -20,13 +20,15 @@ router.get('/new', (req, res) => res.render('category/new.ejs'))
 // Show route
 router.get('/:id', (req, res) => {
     const id = req.params.id
-    Category.findById(id, (err, foundCategory) => {
-        res.render('category/show.ejs', {category: foundCategory})        
+    Category.findById(id).populate('recipes').exec( (err, foundCategory) => {
+        res.render('category/show.ejs', {category: foundCategory}) 
+        console.log(foundCategory)       
     })
 })
 
 // Create route
 router.post('/', (req, res) => {
+  
     Category.create(req.body, (err, createdCategory) => {
         console.log(createdCategory)
         res.redirect('/category')
@@ -59,6 +61,7 @@ router.put('/:id', (req, res) => {
           return  res.send(err)
         }
         res.redirect('/category/'+req.params.id)
+        console.log(updatedCategory)
     })
     // res.send(req.body)
 })

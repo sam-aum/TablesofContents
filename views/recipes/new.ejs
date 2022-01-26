@@ -20,12 +20,15 @@
         <input name="img" placeholder="add image here">
 
         <p>Category: </p>
+       
         <select id='category' name='category'>
-                <option> ---Select Option--- </option>  
+          
+                <option>  </option>  
             <%for(let i=0;i<category.length; i++){%>
                 <option value="<%=category[i]._id%>"><%= category[i].title%></option>
             <% }%>
         </select>
+       
 
         <p>Food Type:</p>
         <select id='foodType' name ='foodType' onchange = "" >  
