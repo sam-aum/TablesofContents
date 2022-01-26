@@ -30,10 +30,19 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
     const id = req.params.id
     console.log(id)
-    Recipes.findById(id, (err, foundRecipes) => {
-        console.log(foundRecipes)
-        res.render('recipes/show.ejs', {recipes: foundRecipes})        
-    })
+    // Recipes.findById(id, (err, foundRecipes) => {
+    //     console.log(foundRecipes)
+    //     res.render('recipes/show.ejs', {recipes: foundRecipes})        
+    // })
+    Recipes.findById(id).populate('category').exec(
+        (err, foundRecipes) => {
+            if(err){
+                res.send(err)
+            }else {
+                res.render('recipes/show.ejs', {recipes: foundRecipes}) 
+            } 
+        }
+    )        
 })
 
 // create routee
@@ -49,19 +58,31 @@ router.post('/', (req, res) => {
 })
 
 // edit route
+// router.get('/:id/edit', (req, res) => {
+//     Recipes.findById(req.params.id, (err, foundRecipe) => {
+//         if (err) {
+//             return res.send(err)
+//         } else {
+//             console.log(foundRecipe)
+//             res.render('recipes/edit.ejs', 
+//             {recipe: foundRecipe, category: foundRecipe.category, id: req.params.id })
+//         }
+//     })
+// })
 router.get('/:id/edit', (req, res) => {
- 
-    Recipes.findById(req.params.id, (err, foundRecipe) => {
+    Recipes.findById(req.params.id).populate('category').exec(
+        (err, foundRecipe) => {
         if (err) {
             return res.send(err)
         } else {
-            console.log(foundRecipe)
-            res.render('recipes/edit.ejs', 
-            {recipe: foundRecipe, id: req.params.id })
+            Category.find({}, (err, foundCategory)=>{
+                console.log(foundRecipe)
+                res.render('recipes/edit.ejs', 
+                {recipe: foundRecipe, category: foundCategory, id: req.params.id })
+            })
         }
     })
 })
-
 
 // Delete Route
 router.delete('/:id', (req, res)=>{
@@ -76,12 +97,12 @@ router.delete('/:id', (req, res)=>{
 router.put('/:id', (req, res) => {
     Recipes.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedRecipe)=>{
         if(err){
-          return  res.send(err)
+          res.send(err)
+        }else{
+            console.log(updatedRecipe)
+            res.redirect(`/recipes/${updatedRecipe.id}`)
         }
-        console.log(updatedRecipe)
-        res.redirect('/recipes/'+req.params.id)
     })
-    // res.send(req.body)
 })
 
 module.exports = router
