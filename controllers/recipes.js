@@ -1,6 +1,7 @@
 const express = require('express')
 const Recipes = require('../models/Recipes')
 const Category = require('../models/Category')
+
 // router stores an instance of the express router class
 
 const router = express.Router()
@@ -10,9 +11,9 @@ const router = express.Router()
 
 // index route
 router.get('/', (req, res) => {
-    Recipes.find({}).sort({'title':1}).exec((err, foundRecipes) => {
-            res.render('recipes/index.ejs', {recipes: foundRecipes})
-        })
+        Recipes.find({}, (err, foundRecipes) => {       
+        res.render('recipes/index.ejs', {recipes: foundRecipes})
+    })
 })
 
 // new route
@@ -45,16 +46,23 @@ router.get('/:id', (req, res) => {
     )        
 })
 
-// create routee
+// create route
 router.post('/', (req, res) => {
     console.log('hitting post route')
     console.log(req.body)
-    
-    Recipes.create(req.body, (err, createdRecipe) => {
-        console.log(req.body)
-        console.log(createdRecipe)
+    Category.findById(req.body.category, (err, foundCategory)=>{
+
+        Recipes.create(req.body, (err, createdRecipe) => {
+            console.log(req.body.category)
+            console.log(createdRecipe)
+            foundCategory.recipes.push(createdRecipe)
+            foundCategory.save()
+            console.log(foundCategory)
+            
+        })
         res.redirect('/recipes')
     })
+  
 })
 
 // edit route
