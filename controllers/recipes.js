@@ -50,7 +50,7 @@ router.get('/:id', (req, res) => {
 // create route
 router.post('/', (req, res) => {
     console.log('hitting post route')
-    console.log(req.body)t -m""
+    console.log(req.body)
  
     router.post('/', (req, res) => { 
     Category.create(req.body, (err, createdCategory) => {
