@@ -22,13 +22,11 @@
         <p>Category: </p>
        
         <select id='category' name='category'>
-          
-                <option>  </option>  
+                <option> ---Select Option--- </option>  
             <%for(let i=0;i<category.length; i++){%>
                 <option value="<%=category[i]._id%>"><%= category[i].title%></option>
             <% }%>
-        </select>
-       
+        </select>  
 
         <p>Food Type: </p>
         <select id='foodType' name ='foodType' onchange = "" >  
@@ -51,8 +49,9 @@
         <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
 
         <br><br>
-        <input type="submit" value="Create new recipe">
+        <input type="submit" value="Create New Recipe">
     </form>
-    
+    <br>
+    <a href='/recipes'>Return to Recipes</a>
 </body>
 </html>
