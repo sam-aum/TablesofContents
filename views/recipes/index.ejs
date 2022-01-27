@@ -9,7 +9,7 @@
 <body>
     <h1>Recipes Index (Home)</h1>
     <div>
-        <ul>
+        <ul style="list-style: none;">
         <% for(let i=0;i<recipes.length;i++){%>
             <li>
                 <a href="/recipes/<%=recipes[i]._id%>">
@@ -26,10 +26,10 @@
         <%}%>
         </ul>
     </div>
-    <a href='/recipes/new'>Add a new recipe!</a>
-
-    <div>
-        <a href="/">Return to Home Page</a>
-    </div>
+    <a href='/recipes/new'>Add a New Recipe!</a>
+    <br><br>
+    
+    <a href='/'>Return to Home Page</a>
+    
 </body>
 </html>
