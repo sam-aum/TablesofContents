@@ -27,8 +27,7 @@ router.get('/:id', (req, res) => {
 })
 
 // Create route
-router.post('/', (req, res) => {
-  
+router.post('/', (req, res) => { 
     Category.create(req.body, (err, createdCategory) => {
         console.log(createdCategory)
         res.redirect('/category')

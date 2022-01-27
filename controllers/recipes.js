@@ -119,7 +119,7 @@ router.delete('/:id', (req, res)=>{
     })
 })
 
-// update route
+// Update route
 router.put('/:id', (req, res) => {
     Recipes.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedRecipe)=>{
         if(err){
