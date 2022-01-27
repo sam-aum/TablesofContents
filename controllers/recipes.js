@@ -1,6 +1,7 @@
 const express = require('express')
 const Recipes = require('../models/Recipes')
 const Category = require('../models/Category')
+const Type = require('../models/Type')
 
 // router stores an instance of the express router class
 
@@ -50,14 +51,30 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     console.log('hitting post route')
     console.log(req.body)
+   
     Category.findById(req.body.category, (err, foundCategory)=>{
-
         Recipes.create(req.body, (err, createdRecipe) => {
             console.log(req.body.category)
             console.log(createdRecipe)
             foundCategory.recipes.push(createdRecipe)
-            foundCategory.save()
             console.log(foundCategory)
+            foundCategory.save()
+            
+        })
+        res.redirect('/recipes')
+    })
+  
+})
+
+router.post('/', (req, res) => {
+    Type.findById(req.body.type, (err, foundType)=>{
+
+        Recipes.create(req.body, (err, createdRecipe) => {
+            console.log(req.body.category)
+            console.log(createdRecipe)
+            foundType.recipes.push(createdRecipe)
+            foundType.save()
+            console.log(foundType)
             
         })
         res.redirect('/recipes')
