@@ -8,13 +8,28 @@
 </head>
 <body>
     <h1>Create a new category for your recipes!</h1>
+            <div>
+                <p>Here is the list of the categories already created: </p> 
+                <ul>
+                    <% for(let i=0; i<category.length; i++){ %>
+                        <li>
+                            <%= category[i].title%>
+                        </li>    
+                    <% } %>
+                </ul>
+            </div>      
+            <form action='/category' method='POST'>
+                <p>Category: </p>
+                <input name="title" placeholder="add a category">
+                <div>
+                    <input type="submit" value="Create new category">
+                </div>
+            </form>
+    <div>
+        <a href="/category">Return to the list of recipes</a>
+    </div>
+    <div>
+        <a href="/category">Return to add recipe</a>
+    </div>
 
-    <form action='/category' method='POST'>
-        <p>Category: </p>
-        <input name="title" placeholder="add a category">
-        <input type="submit" value="Create new category">
-
-
-    </form>
-</body>
 </html>

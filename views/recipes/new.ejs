@@ -18,20 +18,21 @@
 
         <p>Image: </p>
         <input name="img" placeholder="add image here">
-
-        <p>Category: </p>
+        <p>Category</p>
+ 
         <select id='category' name='category'>
-                <option> ---Select Option--- </option>  
+            <option> ---Select Option--- </option>
             <%for(let i=0;i<category.length; i++){%>
                 <option value="<%=category[i]._id%>"><%= category[i].title%></option>
-            <% }%>
+            <% }%>   
         </select>
-
+        <p>If you can't find your category, <button><a href='/category/new'>Create a new category</a></button></p>
+        
         <p>Food Type:</p>
         <select id='foodType' name ='foodType' onchange = "" >  
             <option> ---Select Option--- </option>  
             <option> Entree </option>  
-            <option> Appetizer </option>  
+            <option> Appetizer </option>   
             <option> Dessert </option>   
         </select>  
 
@@ -47,9 +48,12 @@
         <p>Instructions: </p>
         <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
 
+        
+            <!-- <p>Add a new category: </p>
+            <input name="new_category" placeholder="add a new category"> -->
+        
         <br><br>
         <input type="submit" value="Create new recipe">
     </form>
-    
 </body>
 </html>

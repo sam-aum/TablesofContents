@@ -15,7 +15,11 @@ router.get('/', (req, res) => {
 })
 
 // New route
-router.get('/new', (req, res) => res.render('category/new.ejs'))
+router.get('/new', (req, res) => {
+    Category.find({}, (err, foundCategory) => {       
+    res.render('category/new.ejs', {category: foundCategory})
+    })
+})
 
 // Show route
 router.get('/:id', (req, res) => {

@@ -38,11 +38,12 @@ router.get('/:id', (req, res) => {
 
 // create routee
 router.post('/', (req, res) => {
-    console.log('hitting post route')
-    console.log(req.body)
-    
+    // console.log('hitting post route')
+    // console.log(req.body)
+
     Recipes.create(req.body, (err, createdRecipe) => {
         console.log(req.body)
+        console.log(err)
         console.log(createdRecipe)
         res.redirect('/recipes')
     })
