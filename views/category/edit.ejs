@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category Edit</title>
+    <link rel="stylesheet" href="/category/edit.css">
 </head>
 <body>
     <h1>Category Edit Page</h1>
 
-    <form action="" method="">
+    <form method="POST" action="/category/<%=id%>?_method=PUT" >
+
+        <h1><%=category.title%></h1>
+        <input type='text' name='title' placeholder='<%category.title%>'>
 
         <input type ='submit' value="Edit Category">
     </form>
+
+    <div>
+        <a href="/category">Return to Categories Page</a>
+    </div>
 </body>
 </html>

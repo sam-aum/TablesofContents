@@ -5,43 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Page</title>
+    <link rel="stylesheet" href="/recipes/edit.css">
 </head>
 <body>
     <h1>Edit Page</h1>
 
     <form method="POST" action="/recipes/<%=id%>?_method=PUT" >
         <p>Title: </p>
-        <input name="title" value='<%=recipe.title%>' placeholder="Edit <%=recipe.title%>">
+        <input name="title" id='title' type='text' value='<%=recipe.title%>' placeholder="Edit <%=recipe.title%>">
 
         <p>Image: </p>
-        <input name="img" placeholder="add image here">
-
-        <p>Description: </p>
-        <textarea name="description" cols="30" rows="10" value='<%=recipe.description%>' placeholder='Edit the description'></textarea>
-
-        <p>Ingredients: </p>
-        <textarea name="ingredients" cols="30" rows="10" value='<%=recipe.ingredients%>' placeholder='Edit the ingredients'></textarea>
-
-        <p>Instructions: </p>
-        <textarea name="instructions" cols="30" rows="10" value='<%=recipe.instructions%>' placeholder='Edit the instructions'></textarea>
+        <input name="img" value='<%=recipe.img%>' placeholder="add image here">
 
         <p>Category: </p>
-        <input name="category" placeholder="add a category">
+        <select id='category' name='category'>
+                <option value="" disabled selected hidden> <%=recipe.category.title%> </option>  
+            <%for(let i=0;i<category.length; i++){%>
+                <option value="<%=category[i]._id%>"> <%= category[i].title%> </option>
+            <% }%>
+        </select>
 
         <p>Food Type:</p>
-     
         <select id='foodType' name ='foodType' onchange = "" >  
-            <option> ---Select Option--- </option>  
+            <option value="" disabled selected hidden> <%=recipe.foodType%> </option>
             <option> Entree </option>  
             <option> Appetizer </option>  
             <option> Dessert </option>  
-          
-            </select>  
+        </select>  
 
+        <p>Time: </p>
+        <input name="time" value='<%=recipe.time%>' placeholder="add time">
+        
+        <p>Description: </p>
+        <textarea name="description" cols="30" rows="10" placeholder='Edit the description'><%=recipe.description%></textarea>
+
+        <p>Ingredients: </p>
+        <textarea name="ingredients" cols="30" rows="10" placeholder='Edit the ingredients'><%=recipe.ingredients%></textarea>
+
+        <p>Instructions: </p>
+        <textarea name="instructions" cols="30" rows="10" placeholder='Edit the instructions'><%=recipe.instructions%></textarea>
 
       <br><br>
-        <input type="submit" value="Edit recipe">
+        <input type="submit" value="Edit Recipe">
     </form>
-    
+    <br>
+    <a href='/recipes'>Return to Recipes</a>
 </body>
 </html>

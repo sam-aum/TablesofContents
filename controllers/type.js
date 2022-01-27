@@ -1,5 +1,7 @@
 const express = require('express')
+const Recipes = require('../models/Recipes')
 const Category = require('../models/Category')
+const Type = require('../models/Type')
 // router stores an instance of the express router class
 
 const router = express.Router()
@@ -9,42 +11,39 @@ const router = express.Router()
 
 // Index route
 router.get('/', (req, res) => {
-        Category.find({}, (err, foundCategory) => {       
-        res.render('category/index.ejs', {category: foundCategory})
+        Type.find({}, (err, foundCategory) => {       
+        res.render('type/index.ejs', {category: foundCategory})
     })
 })
 
 // New route
-router.get('/new', (req, res) => {
-    Category.find({}, (err, foundCategory) => {       
-    res.render('category/new.ejs', {category: foundCategory})
-    })
-})
+router.get('/new', (req, res) => res.render('type/new.ejs'))
 
 // Show route
 router.get('/:id', (req, res) => {
     const id = req.params.id
-    Category.findById(id).populate('recipes').exec( (err, foundCategory) => {
-        res.render('category/show.ejs', {category: foundCategory}) 
+    Type.findById(id).populate('recipes').exec( (err, foundCategory) => {
+        res.render('type/show.ejs', {category: foundCategory}) 
         console.log(foundCategory)       
     })
 })
 
 // Create route
-router.post('/', (req, res) => { 
-    Category.create(req.body, (err, createdCategory) => {
+router.post('/', (req, res) => {
+  
+    Type.create(req.body, (err, createdCategory) => {
         console.log(createdCategory)
-        res.redirect('/category')
+        res.redirect('/type')
     })
 })
 
 // Edit route
 router.get('/:id/edit', (req, res) => {
-    Category.findById(req.params.id, (err, foundCategory) => {
+    Type.findById(req.params.id, (err, foundCategory) => {
         if (err) {
             return res.send(err)
         } else {
-            res.render('category/edit.ejs', 
+            res.render('type/edit.ejs', 
             {category: foundCategory, id: req.params.id })
         }
     })
@@ -52,18 +51,18 @@ router.get('/:id/edit', (req, res) => {
 
 // Delete Route
 router.delete('/:id', (req, res)=>{
-    Category.findByIdAndDelete({_id : req.params.id}, (err, deleteMsg)=>{
-        res.redirect('/category')
+    Type.findByIdAndDelete({_id : req.params.id}, (err, deleteMsg)=>{
+        res.redirect('/type')
     })
 })
 
 // Update route
 router.put('/:id', (req, res) => {
-    Category.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedCategory)=>{
+    Type.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedCategory)=>{
         if(err){
           return  res.send(err)
         }
-        res.redirect('/category/'+req.params.id)
+        res.redirect('/type/'+req.params.id)
         console.log(updatedCategory)
     })
     // res.send(req.body)

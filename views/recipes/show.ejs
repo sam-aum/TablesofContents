@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Show Page</title>
+    <link rel="stylesheet" href="/recipes/show.css">
 </head>
 <body>
     <h1>Recipe: <%=recipes.title%></h1>
 
     <p><img src =<%=recipes.img%>></p>
 
-    <h4>Category: <%=recipes.category%></h4>
+    <h4>Category: <%=recipes.category.title%></h4>
+  
 
     <h4>Food Type: <%= recipes.foodType %></h4>
     
@@ -36,13 +38,13 @@
     <h2>Instructions:</h2>
     
     <div>
-        <ul>
+        <ol>
             <% var rule = recipes.instructions.split(';') %>
             <% console.log(rule) %>
             <% for(let i=0; i <rule.length; i++){ %>
                 <li><%= rule[i] %> </li>
             <% } %>
-        </ul>     
+        </ol>     
     </div>
 
     <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
@@ -55,6 +57,7 @@
 
     <div>
         <a href="/recipes">Return to Recipe Page</a>
+        <a href="/category">Browse Recipes by categories</a>
     </div>
 
 </body>
