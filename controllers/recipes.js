@@ -50,9 +50,21 @@ router.get('/:id', (req, res) => {
 // create route
 router.post('/', (req, res) => {
     console.log('hitting post route')
-    console.log(req.body)
-   
+    console.log(req.body)t -m""
+ 
+    router.post('/', (req, res) => { 
+    Category.create(req.body, (err, createdCategory) => {
+        console.log(createdCategory)
+        res.redirect('/category')
+    })
+})    
+
+
     Category.findById(req.body.category, (err, foundCategory)=>{
+        console.log(req.body.category[1])
+        Category.create(req.body.category[1],(err, newCategory)=>{
+            console.log(newCategory)
+        })
         Recipes.create(req.body, (err, createdRecipe) => {
             console.log(req.body.category)
             console.log(createdRecipe)
