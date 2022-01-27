@@ -78,22 +78,10 @@ router.post('/', (req, res) => {
             
         })
         res.redirect('/recipes')
-    })
-  
+    }) 
 })
 
 // edit route
-// router.get('/:id/edit', (req, res) => {
-//     Recipes.findById(req.params.id, (err, foundRecipe) => {
-//         if (err) {
-//             return res.send(err)
-//         } else {
-//             console.log(foundRecipe)
-//             res.render('recipes/edit.ejs', 
-//             {recipe: foundRecipe, category: foundRecipe.category, id: req.params.id })
-//         }
-//     })
-// })
 router.get('/:id/edit', (req, res) => {
     Recipes.findById(req.params.id).populate('category').exec(
         (err, foundRecipe) => {
@@ -109,7 +97,6 @@ router.get('/:id/edit', (req, res) => {
         }
     })
 })
-
 
 // Delete Route
 router.delete('/:id', (req, res)=>{
