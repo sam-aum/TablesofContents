@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Category Show Page</title>
+    <link rel="stylesheet" href="/category/show.css">
 </head>
 <body>
   
 
-    <h1><%= category.title%> </h1>
+    <h1> <%= category.title%></h1>
 
     <div>
         <a href="/category">Return to Categories Page</a>
+        <a href="/recipes">Browse all recipes</a>
         <a href="/category/<%=category.id%>/edit">Edit this category</a>
     </div>
 
@@ -20,12 +22,13 @@
 
 <div>
     <% for (let i=0; i<category.recipes.length; i++){ %>
-        <%= category.recipes[i].title %>
+      <a href='../recipes/<%=category.recipes[i]._id%>'> <%= category.recipes[i].title %> </a>
 
    <% } %>
  
 
 
 </div>
+
 </body>
 </html>
