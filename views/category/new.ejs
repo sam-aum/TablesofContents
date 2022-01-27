@@ -9,8 +9,8 @@
 </head>
 <body>
     <h1>Create a new category for your recipes!</h1>
-            <div>
-                <p>Here is the list of the categories already created: </p> 
+        <div>
+            <p>Here is the list of the categories already created: </p> 
                 <ul>
                     <% for(let i=0; i<category.length; i++){ %>
                         <li>
@@ -30,7 +30,7 @@
         <a href="/category">Return to the list of recipes</a>
     </div>
     <div>
-        <a href="/category">Return to add recipe</a>
+        <a href="/recipes/new">Return to add recipe</a>
     </div>
 
     <form action='/category' method='POST'>
