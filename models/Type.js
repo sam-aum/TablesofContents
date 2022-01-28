@@ -6,7 +6,7 @@ const typeSchema = new mongoose.Schema({
         required: true
     },
     recipes: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.String,
         ref: 'Recipe'
     }]
 

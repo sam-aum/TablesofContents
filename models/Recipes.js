@@ -26,8 +26,8 @@ const recipesSchema = new mongoose.Schema({
         type: String
     },
     foodType: {
-        type: String,
-        default: 'Entree'
+        type: mongoose.Schema.Types.String,
+        ref: "Type"
     }
 })
 
