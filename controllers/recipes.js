@@ -46,7 +46,7 @@ router.get('/new', (req, res) => {
         if(err){
             res.send(err)
         }else {
-            res.render('recipes/new.ejs', {category: foundCategory, type: ['entree', 'appetizer', 'dessert']})            
+            res.render('recipes/new.ejs', {category: foundCategory, type: ['Entree', 'Appetizer', 'Dessert']})            
         }
         console.log(req.params)
     })
