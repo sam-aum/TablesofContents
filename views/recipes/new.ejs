@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create new recipe</title>
     <link rel="stylesheet" href="/recipes/new.css">
+
+    <script type="text/javascript">
+        function CheckCategory(val){
+         var element=document.getElementById('color');
+         if(val=='Other')
+           element.style.display='block';
+         else  
+           element.style.display='none';
+        }
+        
+        </script> 
 </head>
 
 <script>
@@ -21,20 +32,35 @@
         <input name="img" placeholder="add image here">
 
         <p>Category: </p>
-        <select id='category' name='category'>
+        <select id='category' name='category'  >
             <option> ---Select Option--- </option>
+            <!-- <option value='Other'> Other </option> -->
             <%for(let i=0;i<category.length; i++){%>
                 <option value="<%=category[i]._id%>"><%= category[i].title%></option>
+               
             <% }%>
+<<<<<<< HEAD
         </select>  
         <p>If you don't see the caetegory on the list, <button><a href='/category/new'>Create a new category</a></button></p>
+=======
+            
+        </select> 
+         
+        <!-- <input type="text" name="category" id="color" style='display: none' /> -->
+        
+
+>>>>>>> main
         <p>Food Type: </p>
-        <select id='foodType' name ='foodType' onchange = "" >  
-            <option> ---Select Option--- </option>  
-            <option> Entree </option>  
-            <option> Appetizer </option>   
-            <option> Dessert </option>   
-        </select>  
+        <select id='foodType' name ='foodType'  >  
+           
+            <option> ---Select Option--- </option>
+            <!-- <option value='Other'> Other </option> -->
+            <%for(let i=0;i<type.length; i++){%>
+                <option value="<%=type[i]%>"><%= type[i]%></option>
+               
+            <% }%>
+                
+            </select>  
 
         <p>Time: </p>
         <input name="time" type='text' placeholder="add time">
@@ -49,8 +75,7 @@
         <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
 
         
-            <!-- <p>Add a new category: </p>
-            <input name="new_category" placeholder="add a new category"> -->
+          
         
         <br><br>
         <input type="submit" value="Create New Recipe">

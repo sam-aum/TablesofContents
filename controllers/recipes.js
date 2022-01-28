@@ -2,6 +2,7 @@ const express = require('express')
 const Recipes = require('../models/Recipes')
 const Category = require('../models/Category')
 const Type = require('../models/Type')
+const Recipe = require('../models/Recipes')
 
 // router stores an instance of the express router class
 
@@ -17,14 +18,37 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/type', (req, res)=>{
+    res.render('recipes/type.ejs')
+  
+})
+
+// router.get('/type/appetizer', (req, res)=>{
+//     Recipes.find({}, (err, foundRecipe)=>{
+//         if(err){
+//             res.send(err)
+//         }else{
+//             res.render('recipes/appetizer.ejs', {recipes: foundRecipe})
+//         }
+//     })
+// })
+
+router.get('/type/:foodType', (req, res)=>{
+	Recipes.find({foodType: req.params.foodType}, 
+        (err, foundRecipes) =>{
+    res.render('recipes/typeRecipes.ejs', {recipes:foundRecipes, foodType: req.params.foodType})})
+    // console.log(req.params.foodType)
+})
+
 // new route
 router.get('/new', (req, res) => {
     Category.find({}, (err, foundCategory)=>{
         if(err){
             res.send(err)
         }else {
-            res.render('recipes/new.ejs', {category: foundCategory})            
+            res.render('recipes/new.ejs', {category: foundCategory, type: ['entree', 'appetizer', 'dessert']})            
         }
+        console.log(req.params)
     })
 })
 
@@ -47,6 +71,8 @@ router.get('/:id', (req, res) => {
     )        
 })
 
+
+
 // create route
 router.post('/', (req, res) => {
     console.log('hitting post route')
@@ -61,13 +87,16 @@ router.post('/', (req, res) => {
 
 
     Category.findById(req.body.category, (err, foundCategory)=>{
+<<<<<<< HEAD
         console.log(req.body.category[1])
         Category.create(req.body.category[1],(err, newCategory)=>{
             console.log(newCategory)
         })
+=======
+        console.log(req.body)
+>>>>>>> main
         Recipes.create(req.body, (err, createdRecipe) => {
-            console.log(req.body.category)
-            console.log(createdRecipe)
+            // console.log(createdRecipe)
             foundCategory.recipes.push(createdRecipe)
             console.log(foundCategory)
             foundCategory.save()
@@ -78,20 +107,7 @@ router.post('/', (req, res) => {
   
 })
 
-router.post('/', (req, res) => {
-    Type.findById(req.body.type, (err, foundType)=>{
 
-        Recipes.create(req.body, (err, createdRecipe) => {
-            console.log(req.body.category)
-            console.log(createdRecipe)
-            foundType.recipes.push(createdRecipe)
-            foundType.save()
-            console.log(foundType)
-            
-        })
-        res.redirect('/recipes')
-    }) 
-})
 
 // edit route
 router.get('/:id/edit', (req, res) => {
