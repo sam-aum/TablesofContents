@@ -15,15 +15,21 @@
          else  
            element.style.display='none';
         }
+        // click other option
+        // promps text box + submit new category button
+        // button does fetch to /category with verb of POST
+        // button onclick will be sep function
+        // get rid of text box and button, select HTML element has new category
+        // doc.createElement with new opt
+        // fetch event.preventdefault
         
         </script> 
 </head>
 
-<script>
 
-</script>
 <body>
-    <h1>Recipe Create Form:</h1>
+    <div class="logo"> </div>
+    <h1>Recipe Create Form:</h1> 
     <form action="/recipes" method="POST">
         <p>Title: </p>
         <input name="title" type="text" placeholder="add title here">
@@ -34,22 +40,17 @@
         <p>Category: </p>
         <select id='category' name='category'  >
             <option> ---Select Option--- </option>
-            <!-- <option value='Other'> Other </option> -->
+            <option value='Other'> Other </option>
             <%for(let i=0;i<category.length; i++){%>
                 <option value="<%=category[i]._id%>"><%= category[i].title%></option>
                
             <% }%>
-<<<<<<< HEAD
-        </select>  
-        <p>If you don't see the caetegory on the list, <button><a href='/category/new'>Create a new category</a></button></p>
-=======
             
         </select> 
          
         <!-- <input type="text" name="category" id="color" style='display: none' /> -->
         
 
->>>>>>> main
         <p>Food Type: </p>
         <select id='foodType' name ='foodType'  >  
            
