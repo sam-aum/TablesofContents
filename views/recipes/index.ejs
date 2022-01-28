@@ -9,18 +9,13 @@
 </head>
 <body>
     <div class= "container-fluid ">
-        <nav class="navbar navbar-light">
-            <div class="container">
-              <a class="navbar-brand logo" href="/">
-                <img src="../images/Tables_of_Contents.png" alt="" height="300" >
-              </a>
+        <div class="row myRow heading1">
+            <div class="col-lg-3 myCol logo"></div>
+            <div class="col-lg-7 myCol navBar align-text-center">
+                <%- include('../partials/navbar2'); %>
             </div>
-          </nav>
-        <!-- <div class="navbar-brand">
-            <img src="../images/Tables_of_Contents.png">
-        </div>
-        <div class="nav-bloc"><h1>Recipes Index (Home)</h1></div> -->
-        
+            <div class="col-lg-2 myCol">Login</div>
+        </div>        
         <div class="our_container">
             <!-- <ul style="list-style: none;"> -->
                 <% for(let i=0;i<recipes.length;i++){%>

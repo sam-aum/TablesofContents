@@ -1,6 +1,39 @@
 body{
     background-color: #FFEFD9
 }
+
+.myRow{
+    border: 1px solid black;
+}
+.myCol{
+    border: 3px solid black;
+}
+.heading1{
+    height: 220px;
+}
+.logo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('images/tables_contents2.png');
+}
+.navBar{
+    padding: 40px 0px 0px 0px;
+}
+.banner{
+    height: 600px;
+    text-align: center;
+    background-position: center;  
+}
+.heading2{
+    height: 100px;
+    text-align: center;
+}
+.icon{
+    height: 400px;  
+    text-align: center; 
+}
+
+
 .our_container{
     display: flex;
     flex-direction: row; 
@@ -39,9 +72,6 @@ a {
     text-decoration: none;
     color:#634419;
 }  
-.logo{
-    align-items: center;
-}
 .buttons {
     background-color: #f5f3f0;
     border-radius: 20px;
