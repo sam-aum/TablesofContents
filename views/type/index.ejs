@@ -8,6 +8,19 @@
 </head>
 <body>
     <h1> Type Index Page</h1>
-    
+
+    <ul style= 'list-style: none'>
+<li>   <% for(let i=0; i <type.length; i++){ %>
+
+<p><a href="/recipes/type/<%=type[i]._id%>" ><%= type[i].title%></a></p>
+
+  <form action='/recipes/type/<%=type[i]._id%>?_method=DELETE' method='POST'>
+    <input type="submit" value="Delete <%=type[i].title%>">
+   
+</form>
+<%  } %>
+</li> 
+</ul>
+   
 </body>
 </html>
