@@ -7,9 +7,7 @@
     <style>
         body{
             margin: 0px;
-        
         }
-     
         .myRow{
             border: 1px solid black;
         }
@@ -25,16 +23,19 @@
             background-image: url('images/tables_contents2.png');
         }
         .navBar{
-            padding: 40px 0px 0px 0px;
+            font-size: 25px;
         }
         .banner{
             height: 600px;
             text-align: center;
-            background-position: center;  
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('images/banner3.png');
         }
         .heading2{
             height: 100px;
-            text-align: center;
+           
         }
         .icon{
             height: 400px;  
@@ -49,35 +50,36 @@
    
      
     <div class="container-fluid">
-
         <div class="row myRow heading1">
             <div class="col-lg-3 myCol logo"></div>
-            <div class="col-lg-7 myCol navBar align-text-center">
+
+            <div class="col-lg-7 myCol navBar nav d-flex align-items-center justify-content-around">
                 <%- include('partials/navbar2'); %>
             </div>
+
             <div class="col-lg-2 myCol">Login</div>
         </div>
 
         <div class="row myRow banner">
-            <div class="col-lg-12 myCol justify-content-center">
+            <div class="col-lg-12 myCol">
                 <h1>Welcome to Our Tables of Contents</h1>
             </div>
         </div>
 
         <div class="row myRow heading2">
-            <div class="col-lg-12 myCol">How It Works</div>
+            <div class="col-lg-12 myCol d-flex justify-content-center align-items-center">How It Works</div>
         </div>
 
         <div class="row myRow icon">
-            <div class="col-lg-4 myCol">
+            <div class="col-lg-4 myCol d-flex justify-content-center align-items-center">
                 Category icon + description
                 <a href='/category'>Recipes by Category</a>
             </div>
-            <div class="col-lg-4 myCol">
+            <div class="col-lg-4 myCol d-flex justify-content-center align-items-center">
                 Type icon + description
                 <h2><a href='/recipes/type'>Browse Recipes by Type</a></h2>
             </div>
-            <div class="col-lg-4 myCol">
+            <div class="col-lg-4 myCol d-flex justify-content-center align-items-center">
                 Recipes icon + description
                 <a href='/recipes'>All Recipe Index</a>
             </div>
