@@ -79,7 +79,8 @@ router.post('/', (req, res) => {
     console.log(req.body)
    
     Category.findById(req.body.category, (err, foundCategory)=>{
-        console.log(req.body)
+        console.log(req.body.category)
+        console.log(foundCategory)
         Recipes.create(req.body, (err, createdRecipe) => {
             // console.log(createdRecipe)
             foundCategory.recipes.push(createdRecipe)
