@@ -77,9 +77,24 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     console.log('hitting post route')
     console.log(req.body)
-   
+ 
+    router.post('/', (req, res) => { 
+    Category.create(req.body, (err, createdCategory) => {
+        console.log(createdCategory)
+        res.redirect('/category')
+    })
+})    
+
+
     Category.findById(req.body.category, (err, foundCategory)=>{
+<<<<<<< HEAD
+        console.log(req.body.category[1])
+        Category.create(req.body.category[1],(err, newCategory)=>{
+            console.log(newCategory)
+        })
+=======
         console.log(req.body)
+>>>>>>> main
         Recipes.create(req.body, (err, createdRecipe) => {
             // console.log(createdRecipe)
             foundCategory.recipes.push(createdRecipe)
