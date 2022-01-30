@@ -5,23 +5,26 @@ h4{
     color:#634419 ;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+a {
+    text-decoration: none;
+    /* color:#634419; */
+}  
 .three_buttons{
     display: flex;
     flex-direction: row; 
     justify-content: center;
 }
 .buttons {
-    background-color:  #f3e2cb;
+    background-color:  #f3ba69;;
     color: #634419;
     border-radius: 10px;
     border-color: #f0e2dc;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px;
     cursor: pointer;
 }
 button:hover{
@@ -59,16 +62,15 @@ button:hover{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
-
 }
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 #161615;
-    border-radius: 5px;
     transition: 0.3s;
     width: 30%;
     height: 300px;
     padding-bottom: 0px;
+    margin: 5px;;
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -85,7 +87,7 @@ img {
   
   /* Add some padding inside the card container */
 .recipe_title {
-    background-color: #f0e6d9;
+    /* background-color: #f0e6d9; */
     padding: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
     text-align: center;
@@ -94,10 +96,6 @@ img {
 .recipe_title:hover {
     background-color:#decbb1;
 }
-a {
-    text-decoration: none;
-    /* color:#634419; */
-}  
 
   /* // RESPONSIVE GRID */
   @media all and (max-width: 768px){
