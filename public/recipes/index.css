@@ -1,12 +1,32 @@
 body{
     background-color: #FFEFD9
 }
-
-.myRow{
-    border: 1px solid black;
+h4{
+    color:#634419 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.myCol{
-    border: 3px solid black;
+.three_buttons{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+.buttons {
+    background-color:  #f3e2cb;
+    color: #634419;
+    border-radius: 10px;
+    border-color: #f0e2dc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#decbb1;
+    color: beige;
 }
 .heading1{
     height: 220px;
@@ -14,10 +34,11 @@ body{
 .logo{
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('images/tables_contents2.png');
+    background-image: url('../images/tables_contents2.png');
 }
 .navBar{
     padding: 40px 0px 0px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .banner{
     height: 600px;
@@ -32,8 +53,6 @@ body{
     height: 400px;  
     text-align: center; 
 }
-
-
 .our_container{
     display: flex;
     flex-direction: row; 
@@ -44,10 +63,12 @@ body{
 }
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 #634419;
+    box-shadow: 0 4px 8px 0 #161615;
+    border-radius: 5px;
     transition: 0.3s;
     width: 30%;
     height: 300px;
+    padding-bottom: 0px;
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -64,28 +85,20 @@ img {
   
   /* Add some padding inside the card container */
 .recipe_title {
+    background-color: #f0e6d9;
     padding: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
     text-align: center;
     color: #634419;
-  }
+}
+.recipe_title:hover {
+    background-color:#decbb1;
+}
 a {
     text-decoration: none;
-    color:#634419;
+    /* color:#634419; */
 }  
-.buttons {
-    background-color: #f5f3f0;
-    border-radius: 20px;
-    border:#634419;
-    border-width: 5px;
-    color: #fbebdb;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+
   /* // RESPONSIVE GRID */
   @media all and (max-width: 768px){
     .card{
