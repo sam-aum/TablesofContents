@@ -51,6 +51,7 @@
             <% }%>
             
         </select> 
+        <p>Don't see your category? Add a category<a href='/category/new' >here.</a></p>
          
         <!-- <input type="text" name="category" id="color" style='display: none' /> -->
         
@@ -59,7 +60,6 @@
         <select id='foodType' name ='foodType'  >  
            
             <option> ---Select Option--- </option>
-            <option value='Other'> Other </option>
             <%for(let i=0;i<type.length; i++){%>
                 <option value="<%=type[i]%>"><%= type[i]%></option>
                
