@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Type Page</title>
+    <title>Types Display</title>
+    <link rel="stylesheet" href="/recipes/recipestype.css">
+    
 </head>
 <body>
-
-    All <%= foodType%> Recipes:
-
+    <img class='logo' src='/images/tables_contents2.png'>
+   <h1> All <%= foodType%> recipes:</h1>
+   <div class="our_container">
     <% for(let i=0; i<recipes.length; i++){ %>
+        <div class="card">
+            <img class="img" src=<%= recipes[i].img %>>
 
-      <a href='/recipes/<%=recipes[i]._id%>'><%= recipes[i].title %></a>   
         
+        <div class="recipe_title">
+      <a href='/recipes/<%=recipes[i]._id%>'><%= recipes[i].title %></a>   
+        </div>
+    </div>
    <% } %>
+    </div>
 </body>
 </html>

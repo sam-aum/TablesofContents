@@ -1,0 +1,59 @@
+body{
+    background-color: #FFEFD9
+}
+
+.our_container{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 #634419;
+    transition: 0.3s;
+    width: 30%;
+    height: 300px;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(199, 181, 181, 0.968);
+  }
+
+  .recipe_title {
+    padding: 1rem;
+    text-align: center;
+    color: #634419;
+  }
+
+  .img {
+    max-height: 70%;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+  } 
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgba(3, 59, 10, 0.897);
+} 
+
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(3, 59, 10, 0.897);
+}
+
+.logo{
+    
+    display: flex;
+    justify-content: center;
+
+}
+
