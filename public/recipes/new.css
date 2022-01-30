@@ -1,3 +1,61 @@
+
 body{
-    background-color: lightcyan
+        background-color: #FFEFD9;
+       
 }
+
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(3, 59, 10, 0.897);
+}
+h4{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(3, 59, 10, 0.897);
+}
+.return{
+    background-color: #FFEFD9;
+    color: rgba(3, 59, 10, 0.897);
+    border: none;
+    font-size: 15px;
+
+}
+.return:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+.logo{
+    
+    margin: auto;
+
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(3, 59, 10, 0.897);
+
+}
+
+.button{
+    background-color: #973d08;
+    border-radius: 20px;
+    border:#634419;
+    border-width: 5px;
+    color: #fbebdb;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+form{
+    position: absolute;
+    left: 20%;
+
+}
+
+

@@ -1,3 +1,88 @@
 body{
-    background-color: lightcyan
+    background-color: #FFEFD9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgba(3, 59, 10, 0.897);
+   
 }
+
+.container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgba(3, 59, 10, 0.897);
+}
+
+p.new{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(3, 59, 10, 0.897);
+}
+
+.buttons {
+    background-color:  #ce612e;
+    border-radius: 5px;
+    border:#634419;
+    padding: 5px;
+    color: #fbebdb;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .buttons:hover{
+   
+    background-color:  #d8a289;
+    border-radius: 5px;
+    border:#634419;
+    border-width: 5px;
+    color: #58432e;
+  
+    text-align: center;
+    cursor: pointer;
+  }
+
+  h1{
+      
+      position: absolute;
+      top: 25%;
+      left: 30%;
+  }
+
+  ul{
+      list-style-type: circle;
+  }
+
+  .container{
+      position: absolute;
+      top: 38%;
+      left: 42%;
+  }
+
+  img{
+    position: absolute;
+    left: 38%
+    
+  }
+
+  .return{
+    background-color:  #ce612e;
+    border-radius: 5px;
+    border:#634419;
+    padding: 5px;
+    color: #fbebdb;
+    font-size: 15px;
+  }
+
+  .return:hover{
+   
+    background-color:  #d8a289;
+    border-radius: 5px;
+    border:#634419;
+    border-width: 5px;
+    color: #58432e;
+
+    text-align: center;
+    cursor: pointer;
+  }

@@ -8,17 +8,32 @@
     <link rel="stylesheet" href="/recipes/show.css">
 </head>
 <body>
-    <h1>Recipe: <%=recipes.title%></h1>
+ 
+        
+  
+    <div class='container'>
+        
+        <img class='logo' src='../images/tables_contents2.png'>
+    <div class='top_row'></div>
+    <h1><%=recipes.title%></h1>
 
-    <p><img src =<%=recipes.img%>></p>
+    <div class = 'three_buttons'>
+        <button class="buttons"><a href="/recipes">Return to Recipe Page</a></button>
+        <button class = 'buttons'><a href="/recipes/<%=recipes._id%>/edit">Edit this recipe</a></button>
+    <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
+        <button class='buttons' type="submit" value="Delete this Recipe" ><a>Delete this recipe</a></button>
+    </form>
+    </div>
 
+    <p><img  class='card' src =<%=recipes.img%>></p>
+    <div class ='first'>
     <h4>Category: <%=recipes.category.title%></h4>
   
 
     <h4>Food Type: <%= recipes.foodType %></h4>
     
     <h4>Preparation time: <%=recipes.time%></h4>
-
+    </div>
     <h2>Description:</h2>
     <p><%=recipes.description%></p>
     
@@ -47,19 +62,9 @@
         </ol>     
     </div>
 
-    <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
-        <input type="submit" value="Delete this Recipe" >
-    </form>  <br>    
+     <br>    
 
-    <div>
-        <a href="/recipes/<%=recipes._id%>/edit"><button>Edit this recipe</button></a>
-    </div>   <br>
-
-    <div>
-        <a href="/recipes">Return to Recipe Page</a>
-        <br><br>
-        <a href="/category">Browse Recipes by categories</a>
-    </div>
-
+    
+</div>
 </body>
 </html>
