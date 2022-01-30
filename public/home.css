@@ -46,7 +46,8 @@ body{
 img {
     height: 350px;
     width: 500px;;
-     
+    max-height: 90%;
+    max-width: 100%;     
 }  
 .pic{
     opacity: 1;
