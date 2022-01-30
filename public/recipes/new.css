@@ -26,8 +26,9 @@ h4{
     cursor: pointer;
 }
 .logo{
-    
-    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -56,6 +57,12 @@ form{
     position: absolute;
     left: 20%;
 
+}
+
+.small{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(3, 59, 10, 0.897);
+    font-size: 13px;
 }
 
 

@@ -36,9 +36,10 @@
     </div>
     <h2>Description:</h2>
     <p><%=recipes.description%></p>
+    <div class= "column">
     
-    <h2>Ingredients:</h2>
     <div> 
+        <h2>Ingredients:</h2>
         <% for(let i=0;i<recipes.ingredients.length;i++){%>
             <ul>
                 <%var list = recipes.ingredients[i].split(',')%>
@@ -50,9 +51,10 @@
         <%}%>
     </div>
 
-    <h2>Instructions:</h2>
+    
     
     <div>
+        <h2>Instructions:</h2>
         <ol>
             <% var rule = recipes.instructions.split(';') %>
             <% console.log(rule) %>
@@ -61,6 +63,7 @@
             <% } %>
         </ol>     
     </div>
+</div>
 
      <br>    
 
