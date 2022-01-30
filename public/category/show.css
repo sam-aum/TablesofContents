@@ -1,6 +1,62 @@
 
 
 body{
+    background-color: #FFEFD9
+}
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.myRow{
+    /* border: 1px solid black; */
+}
+.myCol{
+}
+.heading1{
+    height: 220px;
+}
+.logo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/tables_contents2.png');
+}
+.navBar{
+    font-size: 25px;
+}
+.banner{
+    height: 200px;
+    text-align: center;
+    padding-top: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/foodworld.png');
+    color: rgb(249, 246, 243);
+}
+.heading2{
+    height: 100px;
+}
+.our_container{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 #161615;
+    transition: 0.3s;
+    width: 30%;
+    height: 300px;
+    padding-bottom: 0px;
+    margin: 5px;;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(241, 239, 239, 0.968);
+  }
+
     background-color: #FFEFD9;
    text-align: center;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
