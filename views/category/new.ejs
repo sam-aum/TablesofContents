@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="/category/new.css">
 </head>
 <body>
+    <span class='logo'>
+        <img src='../images/tables_contents2.png'>
+    </span>
     <h1>Create a new category for your recipes!</h1>
+    <div class='container'>
         <div>
-            <p>Here is the list of the categories already created: </p> 
+            <p>Existing Categories: </p> 
             <ul>
                 <% for(let i=0; i<category.length; i++){ %>
                     <li>
@@ -21,15 +25,16 @@
         </div>      
 
         <form action='/category' method='POST'>
-            <p>Category: </p>
+            <p class='new'>New Category: </p>
             <input name="title" placeholder="add a category">
-            <input type="submit" value="Create new category">   
+            <input class='buttons' type="submit" value="Create new category">   
         </form>
 
     <br>
-    
+</div>
     <div>
-        <a href="/category">Return to Categories Page</a>
+        <a href="/category"><button class='return'>Return to Categories Page</button></a>
     </div>
+    
 </body>
 </html>

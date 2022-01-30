@@ -28,19 +28,23 @@
 
 
 <body>
-    <div class="logo"> </div>
+<img class='logo' src='../images/tables_contents2.png'>
     <h1>Recipe Create Form:</h1> 
-    <form action="/recipes" method="POST">
+    <h4><a href='/recipes'><button class='return'>Return to Recipes</button></a></h4>
+    <form class= 'text' action="/recipes" method="POST">
+        <div>
         <p>Title: </p>
         <input name="title" type="text" placeholder="add title here">
-
+    </div>
         <p>Image: </p>
         <input name="img" placeholder="add image here">
-
+        <div class = "type">
         <p>Category: </p>
-        <select id='category' name='category'  >
+        <select id='category' name='category'   >
+        <!-- onchange='CheckCategory(this.value) -->
+      
             <option> ---Select Option--- </option>
-            <option value='Other'> Other </option>
+            <!-- <option value='Other'> Other </option> -->
             <%for(let i=0;i<category.length; i++){%>
                 <option value="<%=category[i]._id%>"><%= category[i].title%></option>
                
@@ -50,38 +54,42 @@
          
         <!-- <input type="text" name="category" id="color" style='display: none' /> -->
         
-
+       
         <p>Food Type: </p>
         <select id='foodType' name ='foodType'  >  
            
             <option> ---Select Option--- </option>
-            <!-- <option value='Other'> Other </option> -->
+            <option value='Other'> Other </option>
             <%for(let i=0;i<type.length; i++){%>
                 <option value="<%=type[i]%>"><%= type[i]%></option>
                
             <% }%>
                 
             </select>  
-
+        </div>
         <p>Time: </p>
         <input name="time" type='text' placeholder="add time">
-
-        <p>Description: </p>
+        <div class = 'text_box'>
+            <div>
+        <p class='column'>Description: </p>
         <textarea name="description" cols="30" rows="10" placeholder='write a description'></textarea>
-
-        <p>Ingredients  (separate each ingredient with a comma): </p>
+    </div>
+    <div>
+        <p class='column'>Ingredients  (separate each ingredient with a comma): </p>
         <textarea name="ingredients" cols="30" rows="10" placeholder='add ingredients'></textarea>
-
-        <p>Instructions (separate each instruction with a semi-colon): </p>
+    </div>
+    <div>
+        <p class='column'>Instructions (separate each instruction with a semi-colon): </p>
         <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
-
-        
+    </div>
+    </div>     
           
         
         <br><br>
-        <input type="submit" value="Create New Recipe">
+        <input class='button' type="submit" value="Create New Recipe">
     </form>
-    <br>
-    <a href='/recipes'>Return to Recipes</a>
+
+  
+   
 </body>
 </html>
