@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="/recipes/show.css">
 </head>
 <body>
-    <div class='our_container'>
-       
-    <h1>Recipe: <%=recipes.title%></h1>
+ 
+        
+  
+    <div class='container'>
+        
+        <img class='logo' src='../images/tables_contents2.png'>
+    <div class='top_row'></div>
+    <h1><%=recipes.title%></h1>
 
     <div class = 'three_buttons'>
         <button class="buttons"><a href="/recipes">Return to Recipe Page</a></button>
@@ -28,7 +33,7 @@
     <h4>Food Type: <%= recipes.foodType %></h4>
     
     <h4>Preparation time: <%=recipes.time%></h4>
-</div>
+    </div>
     <h2>Description:</h2>
     <p><%=recipes.description%></p>
     
