@@ -6,9 +6,18 @@ h4{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a {
+    color: black;
     text-decoration: none;
-    /* color:#634419; */
-}  
+}
+.nav-link{
+    color:gray;
+}
+.nav-link:hover {
+    color: black;
+}
+a:hover{
+    color: black;
+}
 .three_buttons{
     display: flex;
     flex-direction: row; 

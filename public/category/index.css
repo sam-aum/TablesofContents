@@ -78,10 +78,20 @@ button:hover{
     background-color:#decbb1;
     color: beige;
 }
+h4{
+    color:#634419 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 a {
+    color: black;
     text-decoration: none;
-    /* color:#634419; */
-}  
-
-    background-color: purple
+}
+.nav-link{
+    color:gray;
+}
+.nav-link:hover {
+    color: black;
+}
+a:hover{
+    color: black;
 }
