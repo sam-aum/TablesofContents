@@ -14,7 +14,7 @@ h4{
 /* .myCol{
 } */
 a {
-    color: black;
+    color: gray;
     text-decoration: none;
 }
 .nav-link{
@@ -85,7 +85,7 @@ a:hover{
     justify-content: center;
 }
 .buttons {
-    background-color:  #ce612e;    border-radius: 20px;
+    background-color:  #a48c64;    border-radius: 20px;
     border:#634419;
     border-width: 5px;
     color: #fbebdb;
