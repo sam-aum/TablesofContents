@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express ()
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 const methodOverride = require('method-override')
 
 // controller import (along with the rest of my express imports)
@@ -8,7 +8,7 @@ const recipesController = require('./controllers/recipes')
 const categoryController = require('./controllers/category')
 
 const mongoose = require('mongoose')
-const connectionString = "mongodb://127.0.0.1:27017/twoModelDB"
+const connectionString = process.env.MONGODB_URI || "mongodb+srv://sam-aum:content54@cluster0.vgmot.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 mongoose.connect(connectionString)
 mongoose.connection.on('connected',()=>{
