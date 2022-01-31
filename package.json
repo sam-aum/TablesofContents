@@ -10,9 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/dekneeb/TablesofContents.git"
   },
-  "engines": {
-    "node": "14.4.0"
-  },
+ 
   "keywords": [],
   "author": "",
   "license": "ISC",
