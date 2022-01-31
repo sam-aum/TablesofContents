@@ -49,6 +49,7 @@ a {
   justify-content: space-between;
   align-items: stretch;
 }
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 #161615;
@@ -56,10 +57,8 @@ a {
   width: 30%;
   height: 300px;
   padding-bottom: 0px;
-  margin: 5px;;
+  margin: 5px;
 }
-
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(241, 239, 239, 0.968);
 }
@@ -78,29 +77,11 @@ a {
   cursor: pointer;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.card{
-      /* Add shadows to create the "card" effect */
-      box-shadow: 0 4px 8px 0 #634419;
-      transition: 0.3s;
-      width: 30%;
-      height: 300px;
-      border-radius: 5px;
-    
-    /* On mouse-over, add a deeper shadow */
-}
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(214, 120, 97, 0.968);
-}
-
-
 h4{
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-color: rgba(3, 59, 10, 0.897);
- 
+  color:#634419 ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   
 }
-
 img {
   max-height: 70%;
   min-width: 100%;
@@ -111,9 +92,15 @@ img {
 
 /* Add some padding inside the card container */
 .recipe_title {
+  /* background-color: #f0e6d9; */
   padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
   text-align: center;
   color: #634419;
+}
+.recipe_title:hover {
+  background-color:#decbb1;
+  color: lightgray;
 }
 .our_container{
   display: flex;
@@ -122,4 +109,17 @@ img {
   justify-content: space-between;
   align-items: stretch;
 
+}
+/* // RESPONSIVE GRID */
+@media all and (max-width: 768px){
+  .card{
+    width: 49%;
+    margin-bottom: 3rem;
+  }
+}
+@media all and (max-width: 480px){
+  .card{
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }

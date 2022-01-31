@@ -36,8 +36,10 @@
         <div class="our_container">
             <% for (let i=0; i<category.recipes.length; i++){ %>
                 <div class="card">
-                    <img src=<%= category.recipes[i].img %>>    
-                    <a href='../recipes/<%=category.recipes[i]._id%>'> <%= category.recipes[i].title %> </a>
+                    <img src=<%= category.recipes[i].img %>>
+                    <div class="recipe_title">
+                        <a href='../recipes/<%=category.recipes[i]._id%>'> <%= category.recipes[i].title %> </a>
+                    </div>        
                 </div>    
             <% } %>
         </div>

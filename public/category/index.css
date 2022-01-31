@@ -85,8 +85,7 @@ a:hover{
     justify-content: center;
 }
 .buttons {
-    background-color:  #ce612e;
-    border-radius: 20px;
+    background-color:  #ce612e;    border-radius: 20px;
     border:#634419;
     border-width: 5px;
     color: #fbebdb;
