@@ -4,105 +4,103 @@
 
 
 body{
-    background-color: #FFEFD9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #FFEFD9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttons {
-    background-color:  #ce612e;
-    border-radius: 20px;
-    border:#634419;
-    border-width: 5px;
-    color: #fbebdb;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+  background-color:  #ce612e;
+  border-radius: 20px;
+  border:#634419;
+  border-width: 5px;
+  color: #fbebdb;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-  a {
-    text-decoration: none;
-   color: #f5f3f0;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+a {
+  text-decoration: none;
+ color: #f5f3f0;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
 } 
 
 .first{
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-around;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgba(3, 59, 10, 0.897);
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(3, 59, 10, 0.897);
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 #634419;
-    transition: 0.3s;
-    min-height: 300px;
-    min-width: 500px;
-    max-height: 500px;
-    max-width: 700px;
-    border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-   
-  }
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 #634419;
+  transition: 0.3s;
+  min-height: 300px;
+  min-width: 500px;
+  max-height: 500px;
+  max-width: 700px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+ 
+}
 
-  .three_buttons{
+.three_buttons{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+
+}
+h1{
     display: flex;
-    flex-direction: row; 
     justify-content: center;
-
-  }
-  h1{
-      display: flex;
-      justify-content: center;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color: rgba(3, 59, 10, 0.897);
-  }
-
-  .top_row{
-      background-image: ('../images/banner3.png');
-  }
-
-  ul{
-    list-style: circle;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(3, 59, 10, 0.897);
-  }
+}
 
-ol{
+.top_row{
+    background-image: ('../images/banner3.png');
+}
+
+ul{
+  list-style: circle;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgba(3, 59, 10, 0.897);
+}
+
+ol{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgba(3, 59, 10, 0.897);
 }
 
 h2{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(3, 59, 10, 0.897);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgba(3, 59, 10, 0.897);
 }
 p{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(3, 59, 10, 0.897);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgba(3, 59, 10, 0.897);
 }
 
 .logo{
-  margin: auto;
-  display: flex;
-  justify-content: center;
+margin: auto;
+display: flex;
+justify-content: center;
 }
 
 .column{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
 }
-
-
