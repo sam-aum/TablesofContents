@@ -36,8 +36,7 @@ router.get('/type', (req, res)=>{
 router.get('/type/:foodType', (req, res)=>{
 	Recipes.find({foodType: req.params.foodType}, 
         (err, foundRecipes) =>{
-    res.render('recipes/typeRecipes.ejs', {recipes:foundRecipes, foodType: req.params.foodType})})
-    // console.log(req.params.foodType)
+    res.render('recipes/typeRecipes.ejs', {recipes: foundRecipes, foodType: req.params.foodType})})
 })
 
 // new route
@@ -46,7 +45,7 @@ router.get('/new', (req, res) => {
         if(err){
             res.send(err)
         }else {
-            res.render('recipes/new.ejs', {category: foundCategory, type: ['Entree', 'Appetizer', 'Dessert']})            
+            res.render('recipes/new.ejs', {category: foundCategory, type: ['entree', 'appetizer', 'dessert']})            
         }
         console.log(req.params)
     })
