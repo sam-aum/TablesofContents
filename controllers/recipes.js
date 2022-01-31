@@ -102,18 +102,20 @@ router.post('/', (req, res) => {
 
 // edit route
 router.get('/:id/edit', (req, res) => {
-    Recipes.findById(req.params.id), (err, foundRecipe) => {
-        if (err) {
-            return res.send(err)
-        } 
-        else {
-            Category.find({}, (err, foundCategory)=>{
-                console.log(foundRecipe)
-                res.render('recipes/edit.ejs', 
-                {recipe: foundRecipe, category: foundCategory, id: req.params.id })
-            })
+    Recipes.findById(req.params.id).populate('category').exec(
+         (err, foundRecipe) => {
+            if (err) {
+                return res.send(err)
+            } 
+            else {
+                Category.find({}, (err, foundCategory)=>{
+                    console.log(foundRecipe)
+                    res.render('recipes/edit.ejs', 
+                    {recipe: foundRecipe, category: foundCategory, id: req.params.id })
+                })
+            }
         }
-    }
+    )
 })
 
 // Delete Route
