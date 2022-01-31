@@ -8,24 +8,27 @@
     <link rel="stylesheet" href="/category/edit.css">
 </head>
 <body>
-    <h1>Category Edit Page</h1>
-
+    <span class='logo'>
+        <img src='/images/tables_contents2.png'>
+    </span>
+   
+<div class='container'>
     <form method="POST" action="/category/<%=id%>?_method=PUT" >
 
         <h1><%=category.title%></h1>
-        <input type='text' name='title' placeholder='<%category.title%>'>
+        <input type='text' name='title' placeholder='new category name'>
 
-        <input type ='submit' value="Edit Category">
+        <input class='return' type ='submit' value="Edit Category">
 
         
     </form>
 
-    <form action='/category/<%=category._id%>?_method=DELETE' method='POST'>
-        <input type="submit" value="Delete <%=category.title%>">
+    <form  action='/category/<%=category._id%>?_method=DELETE' method='POST'>
+        <input class='return delete' type="submit" value="Delete <%=category.title%>">
     </form>
-
+</div>
     <div>
-        <a href="/category">Return to Categories Page</a>
+        <a href="/category"><button class='return'>Return to Categories Page</button></a>
     </div>
 </body>
 </html>

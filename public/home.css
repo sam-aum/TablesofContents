@@ -14,10 +14,11 @@ body{
 }
 .navBar{
     font-size: 25px;
-    transition: 0.3s;  
+    
 }
 .nav-link{
     color:gray;
+    transition: 0.3s;  
 }
 .nav-link:hover {
     color: black;
