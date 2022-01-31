@@ -8,7 +8,7 @@ const recipesController = require('./controllers/recipes')
 const categoryController = require('./controllers/category')
 
 const mongoose = require('mongoose')
-const connectionString = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/recipes"
+const connectionString = process.env.MONGODB_URI || "mongodb+srv://sam-aum:content54@cluster0.vgmot.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 mongoose.connect(connectionString)
 mongoose.connection.on('connected',()=>{
