@@ -1,131 +1,125 @@
 
 
 body{
-    background-color: #FFEFD9
+  background-color: #FFEFD9
 }
 h1{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.nav-link{
+  color:gray;
 }
 .myRow{
-    /* border: 1px solid black; */
+  /* border: 1px solid black; */
 }
 .myCol{
 }
 .heading1{
-    height: 220px;
+  height: 220px;
 }
 .logo{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('../images/tables_contents2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/tables_contents2.png');
 }
 .navBar{
-    font-size: 25px;
+  font-size: 25px;
 }
 .banner{
-    height: 200px;
-    text-align: center;
-    padding-top: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('/images/foodworld.png');
-    color: rgb(249, 246, 243);
+  height: 200px;
+  text-align: center;
+  padding-top: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/images/foodworld.png');
+  color: rgb(249, 246, 243);
 }
 .heading2{
-    height: 100px;
+  height: 100px;
 }
 .our_container{
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
 }
+
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 #161615;
-    transition: 0.3s;
-    width: 30%;
-    height: 300px;
-    padding-bottom: 0px;
-    margin: 5px;;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(241, 239, 239, 0.968);
-  }
-
-    background-color: #FFEFD9;
-   text-align: center;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   color: rgba(3, 59, 10, 0.897);
-    
-    
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 #161615;
+  transition: 0.3s;
+  width: 30%;
+  height: 300px;
+  padding-bottom: 0px;
+  margin: 5px;
 }
-
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(241, 239, 239, 0.968);
+}
 .buttons {
-    background-color:  #ce612e;
-    border-radius: 20px;
-    border:#634419;
-    border-width: 5px;
-    color: #fbebdb;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
-  a {
-    text-decoration: none;
-   color: #f5f3f0;;
-} 
-
-.card{
-        /* Add shadows to create the "card" effect */
-        box-shadow: 0 4px 8px 0 #634419;
-        transition: 0.3s;
-        width: 30%;
-        height: 300px;
-        border-radius: 5px;
-      
-      /* On mouse-over, add a deeper shadow */
-}
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(214, 120, 97, 0.968);
-  }
-
-
-h4{
+  background-color:  #a48c64;
+  border-radius: 20px;
+  border:#634419;
+  border-width: 5px;
+  color: #fbebdb;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(3, 59, 10, 0.897);
-   
-    
 }
-
-img {
-    max-height: 70%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: top;
-    border-radius: 10px;
-  }  
+h4{
+  color:#634419 ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   
-  /* Add some padding inside the card container */
-.recipe_title {
-    padding: 1rem;
-    text-align: center;
-    color: #634419;
-  }
-  .our_container{
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+}
+img {
+  max-height: 70%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 10px;
+}  
 
+/* Add some padding inside the card container */
+.recipe_title {
+  /* background-color: #f0e6d9; */
+  padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  text-align: center;
+  color: #634419;
+}
+.recipe_title:hover {
+  background-color:#decbb1;
+  color: lightgray;
+}
+.our_container{
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+}
+/* // RESPONSIVE GRID */
+@media all and (max-width: 768px){
+  .card{
+    width: 49%;
+    margin-bottom: 3rem;
+  }
+}
+@media all and (max-width: 480px){
+  .card{
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }
