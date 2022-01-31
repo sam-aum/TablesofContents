@@ -22,27 +22,27 @@
                 <h1>Recipes by category</h1>
             </div>
         </div>
-        <div class="container_categories">
-            <button class="buttons"><a href='/category/new'>Create a new category</a></button>
+        <br><br>
+        <div class = 'three_buttons'>
+            <br><br>
+            <a href="/recipes/new"><button class="buttons">Back to Create Recipe Form</button></a>
+            <a href="/recipes/type"><button class="buttons"tton>Browse Recipes by Type</button></a>
+            <a href="/recipes"><button class="buttons">Browse All Recipes</button></a>
+            <a href='/category/new'><button class="buttons">Create a new category</button></a>
+        </div>
+        <br><br>
             <div class="our_container">
                 <!-- <ul> -->
                 <% for(let i=0; i<category.length; i++){ %>
                     <!-- <li> -->
-                    <button class="buttons_category">
+                    <div class="card">
                         <a href="/category/<%=category[i]._id%>">
-                        <%= category[i].title%>
-                    </a></button>     
+                        <h3><%= category[i].title%></h3>
+                        </a>
+                    </div>     
                 <% } %>
                     <!-- </li>
                 </ul> -->
-            </div>
-        </div>
-            <div>
-
-                <a href="/recipes/new"><button>Back to Create Recipe Form!</button></a>
-                <a href="/recipes/type"><button>Browse Recipes by Type</button></a>
-                <a href="/recipes"><button>Browse All Recipes</button></a>
-                
             </div>       
     </div>
 </body>
