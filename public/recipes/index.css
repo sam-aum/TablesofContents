@@ -1,5 +1,20 @@
 body{
-    background-color: #FFEFD9
+    background-color: #FFEFD9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+.heading1{
+    height: 230px;
+    
+}
+.navBar{
+    font-size: 25px;
+    transition: 0.3s;  
+}
+.nav-link{
+    color:gray;
+}
+.nav-link:hover {
+    color: black;
 }
 h4{
     color:#634419 ;
