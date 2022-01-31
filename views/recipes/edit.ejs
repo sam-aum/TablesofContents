@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="/recipes/edit.css">
 </head>
 <body>
+    <img class='logo' src='/images/tables_contents2.png'>
     <h1>Edit Page</h1>
-
-    <form method="POST" action="/recipes/<%=id%>?_method=PUT" >
+   <h4> <a href='/recipes'><button class='return'>Return to Recipes</button></a></h4>
+    <form class= 'text' method="POST" action="/recipes/<%=id%>?_method=PUT" >
+        <div>
         <p>Title: </p>
         <input name="title" id='title' type='text' value='<%=recipe.title%>' placeholder="Edit <%=recipe.title%>">
-
+        </div>
         <p>Image: </p>
         <input name="img" value='<%=recipe.img%>' placeholder="add image here">
-
+        <div class='type'>
         <p>Category: </p>
         <select id='category' name='category'>
                 <option value="" disabled selected hidden> <%=recipe.category.title%> </option>  
@@ -32,25 +34,25 @@
             <option> Appetizer </option>  
             <option> Dessert </option>  
         </select>  
-
+    </div>
         <p>Time: </p>
         <input name="time" value='<%=recipe.time%>' placeholder="add time">
-        
-        <p>Description: </p>
+        <div class='text_box'>
+        <p class ='column'>Description: </p>
         <textarea name="description" cols="30" rows="10" placeholder='Edit the description'><%=recipe.description%></textarea>
-
-        <p>Ingredients: </p>
+    </div>
+        <p class ='column'>Ingredients: </p>
         <textarea name="ingredients" cols="30" rows="10" placeholder='Edit the ingredients'><%=recipe.ingredients%></textarea>
 
-        <p>Instructions: </p>
+        <p class ='column'>Instructions: </p>
         <textarea name="instructions" cols="30" rows="10" placeholder='Edit the instructions'><%=recipe.instructions%></textarea>
 
       <br><br>
-        <input type="submit" value="Edit Recipe">
+        <input  class='button' type="submit" value="Edit Recipe">
     </form>
 
    
     <br>
-    <a href='/recipes'>Return to Recipes</a>
+   
 </body>
 </html>

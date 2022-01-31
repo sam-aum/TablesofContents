@@ -13,9 +13,9 @@ const router = express.Router()
 
 // index route
 router.get('/', (req, res) => {
-        Recipes.find({}, (err, foundRecipes) => {       
-        res.render('recipes/index.ejs', {recipes: foundRecipes})
-    })
+    Recipes.find({}).sort({'title':1}).exec((err, foundRecipes) => {
+            res.render('recipes/index.ejs', {recipes: foundRecipes})
+        })
 })
 
 router.get('/type', (req, res)=>{
