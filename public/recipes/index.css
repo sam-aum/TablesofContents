@@ -4,7 +4,6 @@ body{
 }
 .heading1{
     height: 230px;
-    
 }
 .navBar{
     font-size: 25px;
@@ -16,6 +15,12 @@ body{
 .nav-link:hover {
     color: black;
 }
+
+.logo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/tables_contents2.png');
+}
 h4{
     color:#634419 ;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -25,12 +30,7 @@ a {
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.nav-link{
-    color:gray;
-}
-.nav-link:hover {
-    color: black;
-}
+
 a:hover{
     color: black;
 }
@@ -55,18 +55,7 @@ a:hover{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
-.heading1{
-    height: 220px;
-}
-.logo{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('../images/tables_contents2.png');
-}
-.navBar{
-    padding: 40px 0px 0px 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 .banner{
     height: 600px;
     text-align: center;
