@@ -4,7 +4,8 @@
   "description": "## Project Description Tables of Contents will be an app designed for users to organize and log recipes to aid in the daily decisions of meal prep.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
