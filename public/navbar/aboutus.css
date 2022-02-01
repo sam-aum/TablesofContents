@@ -1,0 +1,22 @@
+body{
+    background-color: rgba(255,239,217,255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+.heading1{
+    height: 230px;
+    
+}
+.navBar{
+    font-size: 25px;
+    transition: 0.3s;  
+}
+.nav-link{
+    color:gray;
+}
+.nav-link:hover {
+    color: black;
+}
+.row1{
+    height: 250px;
+    margin: 50px 0px 0px 0px;
+}

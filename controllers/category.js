@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     Category.findById(req.params.id, (err, foundCategory) => {
         if (err) {
-            return res.send(err)
+            res.send(err)
         } else {
             res.render('category/edit.ejs', 
             {category: foundCategory, id: req.params.id })
@@ -61,10 +61,12 @@ router.delete('/:id', (req, res)=>{
 router.put('/:id', (req, res) => {
     Category.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedCategory)=>{
         if(err){
-          return  res.send(err)
+          res.send(err)
+        }else{
+            res.redirect('/category/'+req.params.id)
+            console.log(updatedCategory)
         }
-        res.redirect('/category/'+req.params.id)
-        console.log(updatedCategory)
+       
     })
     // res.send(req.body)
 })
