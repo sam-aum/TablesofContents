@@ -1,36 +1,87 @@
 
 body{
-        background-color: #FFEFD9;
-       
-}
-
-h1{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgba(3, 59, 10, 0.897);
-}
-h4{
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgba(3, 59, 10, 0.897);
-}
-.return{
     background-color: #FFEFD9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-brand{
+    width: 350px;
+    height: 210px;
+}
+.nav-link{
+    color:gray;
+    font-size: 30px;
+    
+}
+.nav-link:hover {
+    color: black;
+}
+.navbar-collapse {
+    text-align: center;
+  }
+.myRow2{
+    margin: 50px 0px 50px 0px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(3, 59, 10, 0.897);
-    border: none;
-    font-size: 15px;
-
 }
-.return:hover{
-    font-weight: bold;
+.theButtons{
+    margin: 30px 0px 30px 0px;
+  }
+.buttons {
+    background-color:  #ce612e;
+    border-radius: 20px;
+    border:#634419;
+    border-width: 5px;
+    color: #fbebdb;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.buttonCreate{
+    background-color:  #ce612e;
+    border-radius: 20px;
+    border:#634419;
+    border-width: 5px;
+    color: #fbebdb;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #f5f3f0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  } 
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 #634419;
+    transition: 0.3s;
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+}
 
+.myCol1{
+    margin: 30px 10px 50px 0px;
 }
+.myCol2{
+    margin: 30px 0px 50px 10px;
+}
+.info{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(3, 59, 10, 0.897);
+    margin-bottom: 50px;
+}
+
 
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,31 +89,8 @@ p{
 
 }
 
-.button{
-    background-color: #973d08;
-    border-radius: 20px;
-    border:#634419;
-    border-width: 5px;
-    color: #fbebdb;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-form{
-    position: absolute;
-    left: 20%;
-
-}
-
-.small{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgba(3, 59, 10, 0.897);
-    font-size: 13px;
-}
+.filler{
+    height: 50px;
+  }
 
 
