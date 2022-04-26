@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head', {title: 'Tables of Contents'}); %>
     <title>Create new recipe</title>
     <link rel="stylesheet" href="/recipes/new.css">
 
@@ -28,68 +26,93 @@
 
 
 <body>
-<img class='logo' src='../images/tables_contents2.png'>
-    <h1>Recipe Create Form:</h1> 
-    <h4><a href='/recipes'><button class='return'>Return to Recipes</button></a></h4>
-    <form class= 'text' action="/recipes" method="POST">
-        <div>
-        <p>Title: </p>
-        <input name="title" type="text" placeholder="add title here">
-    </div>
-        <p>Image: </p>
-        <input name="img" placeholder="add image here">
-        <div class = "type">
-        <p>Category: </p>
-        <select id='category' name='category'   >
-        <!-- onchange='CheckCategory(this.value) -->
-      
-            <option> ---Select Option--- </option>
-            <!-- <option value='Other'> Other </option> -->
-            <%for(let i=0;i<category.length; i++){%>
-                <option value="<%=category[i]._id%>"><%= category[i].title%></option>
-               
-            <% }%>
-            
-        </select> 
-        <p class='small'>Don't see your category? Add a category <a href='/category/new'> here.</a></p>
-         
-        <!-- <input type="text" name="category" id="color" style='display: none' /> -->
-        
-       
-        <p>Food Type: </p>
-        <select id='foodType' name ='foodType'  >  
-           
-            <option> ---Select Option--- </option>
-            <%for(let i=0;i<type.length; i++){%>
-                <option value="<%=type[i]%>"><%= type[i]%></option>
-               
-            <% }%>
-                
-            </select>  
-        </div>
-        <p>Time: </p>
-        <input name="time" type='text' placeholder="add time">
-        <div class = 'text_box'>
-            <div>
-        <p class='column'>Description: </p>
-        <textarea name="description" cols="30" rows="10" placeholder='write a description'></textarea>
-    </div>
-    <div>
-        <p class='column'>Ingredients  (separate each ingredient with a comma): </p>
-        <textarea name="ingredients" cols="30" rows="10" placeholder='add ingredients'></textarea>
-    </div>
-    <div>
-        <p class='column'>Instructions (separate each instruction with a semi-colon): </p>
-        <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
-    </div>
-    </div>     
-          
-        
-        <br><br>
-        <input class='button' type="submit" value="Create New Recipe">
-    </form>
+    <%- include('../partials/navbar3'); %>
 
-  
+
+
+    <div class="container">
+        <div class="row myRow2">
+            <div class="col-lg-12 myCol title">
+                <h1>Recipe Create Form:</h1>
+            </div>
+        </div>
    
+        <form class= 'text' action="/recipes" method="POST">
+
+            <div class="row myRow3 theButtons d-flex justify-content-center">
+                <div class="col-lg-8 myCol d-flex flex-row justify-content-around">       
+                    <button class="buttons"><a href="/recipes">Return to Recipe Page</a></button>   
+                    <button class="buttons"><a href='/category/new'>Add a New Category</a></button>
+                    <input class='buttonCreate' type="submit" value="Create New Recipe">            
+                </div>
+            </div>
+
+            <div class="row myRow4 d-flex justify-content-center">
+                <div class="col-lg-6 myCol1 box  d-flex justify-content-center">
+                    <div class = 'card'>
+                        <h2>Image: </h2><br><br>
+                        <input name="img" placeholder="add image here">
+                    </div>
+                </div>
+                <div class="col-lg-4 myCol2 description d-flex flex-column">
+                    <h2>Title: </h2>
+                    <input name="title" type="text" placeholder="add title here">
+                    <div class = 'text_box'>
+                        <h2>Description: </h2>
+                        <textarea name="description" cols="39" rows="15" placeholder='write a description'></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row myRow5 info d-flex justify-content-center">
+                <div class="col-lg-3  myCol " >  
+                    <h4>Category:</h4>
+                        <select id='category' name='category'>   
+                                <option> ---Select Option--- </option>
+                            <%for(let i=0;i<category.length; i++){%>
+                                <option value="<%=category[i]._id%>"><%= category[i].title%></option>
+                            <% }%>
+                        </select> 
+                </div>
+                <div class="col-lg-3  myCol" >  
+                    <h4>Food Type: </h4>
+                        <select id='foodType' name ='foodType'>  
+                                <option> ---Select Option--- </option>
+                            <%for(let i=0;i<type.length; i++){%>
+                                <option value="<%=type[i]%>"><%= type[i]%></option>
+                            <% }%>
+                        </select>  
+                </div>
+                <div class="col-lg-3  myCol">     
+                    <h4>Time: </h4>
+                        <input name="time" type='text' placeholder="add time">
+                </div>
+            </div>
+
+            <div class="row myRow6 d-flex justify-content-center">
+                <div class="col-lg-5 myCol1 d-flex flex-column">
+                    <h2>Ingredients:</h2>
+                    <p class='column'>(separate each ingredient with a comma): </p>
+                    <textarea name="ingredients" cols="30" rows="10" placeholder='add ingredients'></textarea>
+                </div>   
+    
+                <div class="col-lg-5 myCol2 description d-flex flex-column">
+                    <h2>Instructions:</h2>
+                    <p class='column'>(separate each instruction with a semi-colon): </p>
+                    <textarea name="instructions" cols="30" rows="10" placeholder='add instructions'></textarea>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="row myRow7 filler d-flex justify-content-center">
+            <div class="col-lg-12 myCol d-flex flex-row justify-content-around">  
+                
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

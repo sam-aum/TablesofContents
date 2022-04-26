@@ -1,73 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head', {title: 'Tables of Contents'}); %>
     <title>Recipe Show Page</title>
     <link rel="stylesheet" href="/recipes/show.css">
 </head>
 <body>
- 
-        
-  
-    <div class='container'>
-        
-        <img class='logo' src='../images/tables_contents2.png'>
-    <div class='top_row'></div>
-    <h1><%=recipes.title%></h1>
 
-    <div class = 'three_buttons'>
-        <button class="buttons"><a href="/recipes">Return to Recipe Page</a></button>
-        <button class = 'buttons'><a href="/recipes/<%=recipes._id%>/edit">Edit this recipe</a></button>
-    <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
-        <button class='buttons' type="submit" value="Delete this Recipe" ><a>Delete this recipe</a></button>
-    </form>
+    <div class="container-fluid">
+        <div class="row myRow1 heading1">
+            <div class="col-lg-3 myCol logo">
+                <!-- <img src='../images/tables_contents2.png'> -->
+            </div>
+
+            <div class="col-lg-7 myCol navBar nav d-flex align-items-center justify-content-around">
+                <%- include('../partials/navbar2'); %></div>
+            
+            <div class="col-lg-2 myCol d-flex align-items-center justify-content-around">
+                <button type="button" class="btn btn-primary btn-lg">Login</button>
+            </div>
+        </div>
     </div>
-
-    <p><img  class='card' src =<%=recipes.img%>></p>
-    <div class ='first'>
-    <h4>Category: <%=recipes.category.title%></h4>
   
 
-    <h4>Food Type: <%= recipes.foodType %></h4>
-    
-    <h4>Preparation time: <%=recipes.time%></h4>
-    </div>
-    <h2>Description:</h2>
-    <p><%=recipes.description%></p>
-    <div class= "column">
-    
-    <div> 
-        <h2>Ingredients:</h2>
-        <% for(let i=0;i<recipes.ingredients.length;i++){%>
-            <ul>
-                <%var list = recipes.ingredients[i].split(',')%>
-                <% console.log(list) %>
-                <% for(let i=0; i <list.length; i++){ %>
-                    <li><%= list[i] %> </li>
-                <% } %>   
-            </ul>
-        <%}%>
-    </div>
+    <div class="container">
+        <div class="row myRow2">
+            <div class="col-lg-12 myCol title">
+                <h1><%=recipes.title%></h1>
+            </div>
+        </div>
 
-    
-    
-    <div>
-        <h2>Instructions:</h2>
-        <ol>
-            <% var rule = recipes.instructions.split(';') %>
-            <% console.log(rule) %>
-            <% for(let i=0; i <rule.length; i++){ %>
-                <li><%= rule[i] %> </li>
-            <% } %>
-        </ol>     
-    </div>
-</div>
 
+        <div class="row myRow3 theButtons d-flex justify-content-center">
+            <div class="col-lg-8 myCol d-flex flex-row justify-content-around">       
+                <button class="buttons"><a href="/recipes">Return to Recipe Page</a></button>
+                <button class = 'buttons'><a href="/recipes/<%=recipes._id%>/edit">Edit this recipe</a></button>
+                <form method="POST" action="/recipes/<%=recipes._id%>?_method=DELETE">
+                    <button class='buttons' type="submit" value="Delete this Recipe" ><a>Delete this recipe</a></button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row myRow4 d-flex justify-content-center">
+            <div class="col-lg-6 myCol1 box  d-flex justify-content-center">
+                <div class = 'card'>
+                    <img class='img' src =<%=recipes.img%>>
+                </div>
+            </div>
+            <div class="col-lg-4 myCol2 description d-flex flex-column">
+                <h2>Description:</h2>
+                <p><%=recipes.description%></p>
+            </div>
+        </div>
+
+
+        <div class="row myRow5 info d-flex justify-content-center">
+            <div class="col-lg-9 myCol d-flex flex-row justify-content-around">  
+                <h4>Category: <em><%=recipes.category.title%></em></h4>
+            
+                <h4>Food Type: <em><%= recipes.foodType %></em></h4>
+                
+                <h4>Preparation time: <em><%=recipes.time%></em></h4>
+            </div>
+        </div>
+
+      
+
+        <div class="row myRow6 d-flex justify-content-center">
+            <div class="col-lg-3 myCol1 d-flex flex-column">
+                <h2>Ingredients:</h2>
+                <% for(let i=0;i<recipes.ingredients.length;i++){%>
+                    <ul>
+                        <%var list = recipes.ingredients[i].split(',')%>
+                        <% console.log(list) %>
+                        <% for(let i=0; i <list.length; i++){ %>
+                            <li><%= list[i] %> </li>
+                        <% } %>   
+                    </ul>
+                <%}%>
+            </div>   
+
+            <div class="col-lg-6 myCol2 description d-flex flex-column">
+                    <h2>Instructions:</h2>
+                    <ol>
+                        <% var rule = recipes.instructions.split(';') %>
+                        <% console.log(rule) %>
+                        <% for(let i=0; i <rule.length; i++){ %>
+                            <li><%= rule[i] %> </li>
+                        <% } %>
+                    </ol>     
+            </div>
+        </div>
+        <div class="row myRow7 filler d-flex justify-content-center">
+            <div class="col-lg-12 myCol d-flex flex-row justify-content-around">  
+                
+            </div>
+        </div>
+
+    </div>
      <br>    
 
     
-</div>
+   
 </body>
 </html>
