@@ -4,7 +4,8 @@ https://tablesofcontent.herokuapp.com/
 ## Project Description
 Tables of Contents will be an app designed for users to organize and log recipes to aid in the daily decisions of meal prep.
 
-
+## Home Page
+![Home](https://github.com/sam-aum/TablesofContents/assets/95770704/6e3adf18-3b22-4716-b2cc-1aa5556ab5d2)
 
 ## USER STORIES
 As a user I want to be able organize recipes based on category - app/snacks, vs desserts, vs dinner
@@ -35,11 +36,12 @@ As a user I want to be able to delete recipes
 
 #![Screen Shot 2022-01-24 at 9 04 10 AM](https://user-images.githubusercontent.com/95259747/150808066-2ecde8bc-0694-4dae-8de0-ff1703b792d5.png)
 
-## Home Page
-![Home](https://github.com/sam-aum/TablesofContents/assets/95770704/6e3adf18-3b22-4716-b2cc-1aa5556ab5d2)
+
 
 
 ## Wireframes
+
+Used Wireframes to design the layout of the site
 
 <img width="721" alt="Screen Shot 2022-01-21 at 2 56 11 PM" src="https://user-images.githubusercontent.com/95259747/150807941-5f38ee8e-bb61-4163-9932-a265e071b3e2.png">
 
